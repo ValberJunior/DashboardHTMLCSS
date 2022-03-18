@@ -1,3 +1,9 @@
 header .logo .logo__img{
     width: 160px;
 }
+
+header .profile__img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
