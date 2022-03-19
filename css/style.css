@@ -39,7 +39,7 @@ header .profile__img{
 }
 
 .aside__menu li{
-    height: 90px;
+    height: 80px;
     font-size: 20px;
 
     cursor: pointer;
@@ -54,6 +54,11 @@ header .profile__img{
     background-color: aliceblue;
     color: #6accf0;
     opacity: 0.6;
+}
+
+#page__active{
+    color: #6accf0;
+    background-color: aliceblue;
 }
 
 .content .grid__menu{
