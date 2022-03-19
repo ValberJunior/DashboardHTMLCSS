@@ -1,6 +1,6 @@
 /* Colors */
 .special__bg{
-    background-color: #e7e5e5;
+    background: linear-gradient(#e7e5e5, #e7e5e5, #e7e5e585);
 }
 
 /* Header */
