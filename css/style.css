@@ -3,6 +3,16 @@
     background: linear-gradient(#e7e5e5, #e7e5e5, #e7e5e585);
 }
 
+*{
+    margin:0;
+    padding:0;
+}
+
+/* BODY */
+body{
+    background-color: #e7e5e5;
+}
+
 /* Header */
 
 header .logo .logo__img{
@@ -31,14 +41,17 @@ header .profile__img{
 
 .content .aside{
     flex:1;
+    background-color: white;
 }
 
 .content .aside .aside__menu{
     list-style: none;
     margin: 40px 0px 80px 0px;
+    padding: 0px 30px;
 }
 
 .aside__menu li{
+
     height: 80px;
     font-size: 20px;
 
@@ -54,11 +67,6 @@ header .profile__img{
     background-color: aliceblue;
     color: #6accf0;
     opacity: 0.6;
-}
-
-#page__active{
-    color: #6accf0;
-    background-color: aliceblue;
 }
 
 .content .grid__menu{
