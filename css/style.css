@@ -1,3 +1,8 @@
+/* Colors */
+.special__bg{
+    background-color: #e7e5e5;
+}
+
 /* Header */
 
 header .logo .logo__img{
@@ -18,18 +23,35 @@ header .profile__img{
 
 /* Main */
 
+.content{
+    overflow: hidden;
+}
+
 .content .aside{
     flex:1;
-    height: 100vh;
-    background: red;
 }
 
 .content .grid__menu{
     flex:3;
-    height: 100vh;
-    background: green;
 }
 
+.grid__card{
+    height: 10rem;
+    cursor: pointer;
+    margin: 10px;
+
+    transition: all 0.3s linear;
+}
+
+.grid__card:hover{
+    background-color: #555;
+    color: white;
+    opacity: 0.5;
+}
+
+.font__icon{
+    font-size: 5vw;
+}
 
 /* Footer */
 

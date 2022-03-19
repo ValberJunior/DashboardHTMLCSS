@@ -17,7 +17,7 @@
 <body>
     
     <!--Header-->
-    <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <header class="navbar navbar-expand-lg navbar-light sticky-top special__bg">
         <nav class="container-fluid">
 
             <!--Logo-->
@@ -67,31 +67,88 @@
     <main class="container-fluid d-flex content">
 
         <!--aside-->
-        <aside class="aside">
+        <aside class="aside bg-light">
             Menu Lateral
         </aside>
 
-        <section class="grid__menu">
-            <article>
-                Turmas
-            </article>
-                
-            <article>
-                Adicionar Alunos
-            </article>
+        <!-- Cards -->
 
-            <article>
-                Atividades
-            </article>
+        <section class="container grid__menu pb-5 bg-light">
 
-            <article>
-                Grade de Horários
-            </article>
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                <div class="card grid__card">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                    <h5 class="card-title fs-5">
+                        <i class="fa-solid fa-people-roof"></i>  Turmas
+                    </h5>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card grid__card">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h5 class="card-title fs-5">
+                            <i class="fa-solid fa-user-plus"></i> Adicionar Aluno
+                        </h5>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-6">
+                    <div class="card grid__card">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h5 class="card-title fs-5">
+                            <i class="fa-solid fa-people-roof"></i> Atividades
+                        </h5>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card grid__card">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h5 class="card-title fs-5">
+                            <i class="fa-solid fa-clock"></i> Grade de Horários
+                        </h5>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card grid__card ">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h5 class="card-title fs-5">
+                            <i class="fa-solid fa-bars-progress"></i> Avaliações
+                        </h5>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card grid__card ">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <h5 class="card-title fs-5">
+                            <i class="fa-solid fa-chart-line"></i> Performance
+                        </h5>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
         </section>
     </main>
 
     <!--Footer-->
-    <Footer class="bg-light pt-3">
+    <Footer class="special__bg pt-3">
 
         <section class="footer__tecs d-flex justify-content-between container mt-5 mb-5">
 
@@ -117,9 +174,6 @@
 
     </Footer>
     
-
-    
-
     <!-- Script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
