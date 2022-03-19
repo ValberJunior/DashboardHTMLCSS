@@ -1,9 +1,45 @@
+/* Header */
+
 header .logo .logo__img{
-    width: 160px;
+    width: 140px;
 }
 
 header .profile__img{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    margin: 10px;
+}
+
+.sub__menu li{
+    width: 250px;
+    padding: 10px;
+}
+
+/* Main */
+
+.content .aside{
+    flex:1;
+    height: 100vh;
+    background: red;
+}
+
+.content .grid__menu{
+    flex:3;
+    height: 100vh;
+    background: green;
+}
+
+
+/* Footer */
+
+.footer__icons .footer__icon{
+    width: 50px;
+    height: 50px;
+
+    margin: 5px;
+}
+
+.footer__copyright p {
+    border-top: 1px solid #555;
 }

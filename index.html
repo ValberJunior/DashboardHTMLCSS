@@ -15,9 +15,10 @@
     <script src="https://kit.fontawesome.com/51d1ddecd8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
     <!--Header-->
     <header class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <nav class="container-fluid p-2">
+        <nav class="container-fluid">
 
             <!--Logo-->
             <section class="logo d-flex align-items-center">
@@ -39,17 +40,23 @@
             <section class="collapse navbar-collapse justify-content-end me-2" id="navbarNav">
 
                     <ul class="navbar-nav align-items-center justify-content-xl-center ps-4">
+
                         <li class="nav-item me-2 fs-5">
-                            <a class="nav-link active" aria-current="page" href="#"> <i class="fa-solid fa-right-from-bracket"></i> Sair</a>
-                        </li>
-                        <li class="nav-item me-2 fs-5">
-                            <a class="nav-link" href="#"> <i class="fa-solid fa-gear"></i> Ajustes</a>
-                        </li>
-                        <li class="nav-item me-2 fs-5">
-                            <a class="nav-link" href="#">
+                                <figure class="profile d-flex align-items-center">
                                     <img src="./assets/profile.jpg" alt="Imagem de Perfil" class="profile__img"/>
-                            </a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Maria Aparecida Fernandes
+                                        </a>
+                                        <ul class="dropdown-menu sub__menu" aria-labelledby="navbarDropdownMenuLink">
+                                          <li><a class="dropdown-item fs-5" href="#"><i class="fa-solid fa-gear"></i> Ajustes</a></li>
+                                          <li><a class="dropdown-item fs-5" href="#"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                                        </ul>
+                                      </li>
+                                </figure>
                         </li>
+
+            
                     </ul>
             </section>
 
@@ -57,12 +64,14 @@
     </header> 
 
     <!-- Main -->
-    <main>
-        <aside>
+    <main class="container-fluid d-flex content">
+
+        <!--aside-->
+        <aside class="aside">
             Menu Lateral
         </aside>
 
-        <section>
+        <section class="grid__menu">
             <article>
                 Turmas
             </article>
@@ -82,14 +91,33 @@
     </main>
 
     <!--Footer-->
-    <Footer>
-        Este é o footer
+    <Footer class="bg-light pt-3">
+
+        <section class="footer__tecs d-flex justify-content-between container mt-5 mb-5">
+
+            <article class="d-flex flex-column align-items-center">
+                <p class="fs-5">Tecnologias aplicadas</p>
+                <figure class="h-50 footer__icons">
+                    <img src="./assets/html5.png" alt="Tecnologia Html5" class="footer__icon"/> 
+                    <img src="./assets/css3.png" alt="Tecnologia CSS3" class="footer__icon"/>
+                    <img src="./assets/bootstrap.png" alt="Tecnologia Bootstrap" class="footer__icon"/>
+                </figure>
+            </article>
+    
+            <article class="footer__info h-50">
+                <figure class="p-2">
+                    <img src="./assets/logofive.png" alt="logo five" class="footer__img"/>
+                </figure>
+            </article>
+        </section>
+
+       <section class="d-flex justify-content-center align-items-center footer__copyright mt-5 pt-3">
+           <p class="p-2"><i class="fa-regular fa-copyright"></i> Desenvolvido para prática de html e css - Valber Junior - 2022</p>
+       </section>
+
     </Footer>
     
 
-
-
- 
     
 
     <!-- Script bootstrap -->
