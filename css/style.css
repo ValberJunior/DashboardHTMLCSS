@@ -103,3 +103,9 @@ header .profile__img{
 .footer__copyright p {
     border-top: 1px solid #5555559c;
 }
+
+/* Modals */
+
+.modal__settings{
+    max-width: 50vw;
+}
