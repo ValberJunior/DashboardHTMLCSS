@@ -3,12 +3,8 @@
     background: linear-gradient(#e7e5e5, #e7e5e5, #e7e5e585);
 }
 
-*{
-    margin:0;
-    padding:0;
-}
 
-/* BODY */
+/* Body */
 body{
     background-color: #e7e5e5;
 }
@@ -33,9 +29,19 @@ header .profile__img:hover{
     opacity: 0.7;
 }
 
-.sub__menu li{
+.header .navbar__menu{
+    font-size: 18px;
+}
+
+header .navbar__sub__menu li{
     width: 250px;
     padding: 10px;
+
+    font-size: 18px;
+}
+
+header .navbar__sub__menu li a{
+    font-size: 16px;
 }
 
 /* Main */
@@ -60,7 +66,7 @@ header .profile__img:hover{
 .aside__menu li{
 
     height: 80px;
-    font-size: 20px;
+    font-size: 18px;
 
     cursor: pointer;
 
@@ -81,6 +87,8 @@ header .profile__img:hover{
     color: #212529;
 }
 
+/* Cards */
+
 .content .grid__menu{
     flex:3;
 }
@@ -90,7 +98,6 @@ header .profile__img:hover{
     height: 10rem;
     cursor: pointer;
     margin: 10px;
-
     transition: all 1s linear;
 }
 
@@ -100,10 +107,25 @@ header .profile__img:hover{
     opacity: 0.5;
 }
 
+.grid__card h5{
+    font-size: 18px;
+}
+
+.grid__card h5 .grid__rotule{
+    margin: 0px 0px 0px 10px;
+}
+
 
 .font__icon{
     font-size: 5vw;
 }
+
+/* Charts */
+
+.chart__img{
+    width: 50%;
+}
+
 
 /* Footer */
 
@@ -112,6 +134,14 @@ header .profile__img:hover{
     height: 50px;
 
     margin: 5px;
+}
+
+.footer__tecs p{
+    font-size: 16px;
+}
+
+.footer__img{
+    width: 140px;
 }
 
 .footer__copyright p {
@@ -130,16 +160,9 @@ header .profile__img:hover{
     background-color: #e7e5e5;
 }
 
-.modal__classroom li{
-    cursor: pointer;
-}
 
-.modal__classroom li:hover{
-    opacity: 0.9;
-    color: #6accf0;
-    background-color: aliceblue;
-}
+/* Imagem de Erro 404 */
 
-.chart__img{
-    width: 50%;
+.erro__img{
+    width: 100%;
 }

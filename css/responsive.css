@@ -1,0 +1,102 @@
+/* Breakpoints */
+
+/* Mobile*/
+    @media(max-width: 767.98px){
+      
+    }
+
+
+/*Tablet*/
+    @media(min-width: 768px) and (max-width: 1199.98px){
+
+    /* Header */
+
+    header .logo .logo__img{
+        width: 120px;
+    }
+
+    header .profile__img{
+        width: 40px;
+        height: 40px;
+    }
+
+    header .navbar__sub__menu li a{
+        width: 220px;
+        font-size: 14px;
+    }
+    
+
+        /* Aside */
+
+    .content .aside{
+        background-color: white;
+    }
+    .content .aside .aside__menu{
+        padding: 0px 20px;
+    }
+        .aside__menu li{
+            height: 60px;
+            font-size: 14px;
+        }
+
+    /* Cards */
+
+    .grid__card{
+            text-align: center;
+    }
+
+    .grid__card h5{
+        font-size: 16px;
+
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .grid__card h5 .grid__rotule{
+        margin: 10px 0px 0px 0px;
+    }
+    
+    /* Footer */
+
+    .footer__icons .footer__icon{
+        width: 50px;
+        height: 50px;
+    
+        margin: 5px;
+    }
+    
+    .footer__copyright p {
+        border-top: 1px solid #5555559c;
+    }
+
+    /* Footer */
+
+    .footer__icons .footer__icon{
+        width: 35px;
+        height: 35px;
+
+        margin: 5px;
+    }
+    
+    .footer__img{
+        width: 120px;
+    }
+
+    .footer__tecs p{
+        font-size: 14px;
+    }
+
+    /* Modals */
+
+    .modal__settings{
+        max-width: 80vw;
+    }
+
+    .list-group__title{
+        font-weight: bold;
+        color: #555;
+        background-color: #e7e5e5;
+    }
+
+
+    }

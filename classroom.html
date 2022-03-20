@@ -13,75 +13,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!--CSS-->
     <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!--Responsive-->
+    <link href="./css/responsive.css" rel="stylesheet" type="text/css">
     <!--FontAswome-->
     <script src="https://kit.fontawesome.com/51d1ddecd8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
 <!--Header-->
-    <header class="navbar navbar-expand-lg navbar-light sticky-top special__bg">
-        <nav class="container-fluid">
+<header class="navbar navbar-expand-lg navbar-light sticky-top special__bg">
+  <nav class="container-fluid">
 
-            <!--Logo-->
-            <section class="logo d-flex align-items-center">
-                <a class="navbar-brand" href="./index.html">
-                    <figure>
-                        <img src="./assets/logofive.png" alt="Logo da Five" class="logo__img"/>
-                    </figure>            
-                </a>
-            </section>
+      <!--Logo-->
+      <section class="logo d-flex align-items-center">
+          <a class="navbar-brand" href="./index.html">
+              <figure>
+                  <img src="./assets/logofive.png" alt="Logo da Five" class="logo__img"/>
+              </figure>            
+          </a>
+      </section>
 
-            <!--Mobile Button-->
-            <section class="mobile__button">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </section>
+      <!--Mobile Button-->
+      <section class="mobile__button">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </section>
 
-            <!--Menu Navbar-->
-            <section class="collapse navbar-collapse justify-content-end me-2" id="navbarNav">
+      <!--Menu Navbar-->
+      <section class="collapse navbar-collapse justify-content-end me-2" id="navbarNav">
 
-                    <ul class="navbar-nav align-items-center justify-content-xl-center ps-4">
+              <ul class="navbar-nav align-items-center justify-content-xl-center ps-4 navbar__menu">
 
-                        <li class="nav-item me-2 fs-5">
-                                <figure class="profile d-flex align-items-center">
-                                    <img src="./assets/profile.jpg" alt="Imagem de Perfil" class="profile__img"/>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Maria Aparecida Fernandes
-                                        </a>
-                                        <ul class="dropdown-menu sub__menu" aria-labelledby="navbarDropdownMenuLink">
-                                          <li><a class="dropdown-item fs-5" href="#"><i class="fa-solid fa-arrow mb-2s-rotate text-info me-3"></i> Trocar usuário</a></li>
-                                          <li><a class="dropdown-item fs-5" href="#"><i class="fa-solid fa-right-from-bracket text-info me-3"></i> Sair</a></li>
-                                        </ul>
-                                      </li>
-                                </figure>
-                        </li>
+                  <li class="nav-item me-2">
+                          <figure class="profile d-flex align-items-center">
+                              <img src="./assets/profile.jpg" alt="Imagem de Perfil" class="profile__img"/>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Maria Aparecida Fernandes
+                                  </a>
+                                  <ul class="dropdown-menu navbar__sub__menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow mb-2s-rotate text-info me-3"></i> Trocar usuário</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket text-info me-3"></i> Sair</a></li>
+                                  </ul>
+                                </li>
+                          </figure>
+                  </li>
 
-            
-                    </ul>
-            </section>
+      
+              </ul>
+      </section>
 
-        </nav>
-    </header> 
+  </nav>
+</header> 
+
 
 <!-- Main -->
     <main class="container-fluid d-flex content">
 
-        <!--aside-->
-        <aside class="aside">
-            <ul class="aside__menu">
-                <li class="text-info"><i class="fa-solid fa-circle-plus me-3"></i> Criar turma</li>
-                <li><a href="./index.html"><i class="fa-solid fa-house me-3"></i> Home</li></a>
-                <li><i class="fa-solid fa-envelope"></i><span class="badge bg-danger rounded-circle me-3 p-1">14</span> Mensagens</li>
-                <li><i class="fa-solid fa-gear me-3"></i> Ajustes</li>
-                <li><i class="fa-solid fa-headset me-3"></i> Suporte</li>
-                <li><i class="fa-solid fa-calendar-days me-3"></i> Agenda</li>
-                <li> <i class="fa-solid fa-chart-column me-3"></i> PDI</li>
-                <li><i class="fa-solid fa-triangle-exclamation me-3"></i> Avisos</li>
-                <li><i class="fa-solid fa-bars-progress me-3"></i> Plano de Estudos</li>
-            </ul>
-        </aside>
+      <!--aside-->
+                <aside class="aside">
+                  <ul class="aside__menu">
+                      <li class="text-info"><i class="fa-solid fa-circle-plus me-2"></i> Criar turma</li>
+                      <li><a href="./index.html"><i class="fa-solid fa-house me-2"></i> Home</a></li>
+                      <li><i class="fa-solid fa-envelope"></i><span class="badge bg-danger rounded-circle me-2 p-1">14</span> Mensagens</li>
+                      <li><i class="fa-solid fa-gear me-2"></i> Ajustes</li>
+                      <li><i class="fa-solid fa-headset me-2"></i> Suporte</li>
+                      <li><i class="fa-solid fa-calendar-days me-2"></i> Agenda</li>
+                      <li> <i class="fa-solid fa-chart-column me-2"></i> PDI</li>
+                      <li><i class="fa-solid fa-triangle-exclamation me-2"></i> Avisos</li>
+                      <li><i class="fa-solid fa-bars-progress me-2"></i> Plano de Estudos</li>
+                  </ul>
+              </aside>
 
         <!-- Turmas -->
         <section class="container grid__menu pt-4 pb-5 bg-light">
@@ -91,7 +94,7 @@
                     <!--Gerenciar Turma // Lista de Alunos--> 
                 
                 <!--Turma 01-->
-                <div class="col-sm-6">
+                <div class="col-md-12 col-lg-6">
                     <h2>Turma 01</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -209,7 +212,7 @@
                 </div>
 
                 <!--Turma 02-->
-                <div class="col-sm-6">
+                <div class="col-md-12 col-lg-6">
                     <h2>Turma 02</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -328,7 +331,7 @@
 
 
             <!--Turma 03-->
-                <div class="col-sm-6">
+                <div class="col-md-12 col-lg-6">
                     <h2>Turma 03</h2>
                     <table class="table table-secondary table-striped">
                     
