@@ -22,6 +22,7 @@
     
 <!--Header-->
 <header class="navbar navbar-expand-lg navbar-light sticky-top special__bg">
+        
   <nav class="container-fluid">
 
       <!--Offcanvas Exclusivo para Versão Mobile-->
@@ -55,18 +56,23 @@
               <ul class="navbar-nav align-items-center justify-content-xl-center ps-4 navbar__menu">
 
                   <li class="nav-item me-2">
-                          <figure class="profile d-flex align-items-center">
+                          <div class="profile d-flex align-items-center">
                               <img src="./assets/profile.jpg" alt="Imagem de Perfil" class="profile__img"/>
                               <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Maria Aparecida Fernandes
                                   </a>
                                   <ul class="dropdown-menu navbar__sub__menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow mb-2s-rotate text-info me-3"></i> Trocar usuário</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket text-info me-3"></i> Sair</a></li>
+                                      <li>
+                                          <a class="dropdown-item" href="#"><i class="fa-solid fa-arrow mb-2s-rotate text-info me-3"></i> Trocar usuário</a>
+                                      </li>
+
+                                      <li>
+                                          <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket text-info me-3"></i> Sair</a>
+                                      </li>
                                   </ul>
                                 </li>
-                          </figure>
+                          </div>
                   </li>
 
       
@@ -100,10 +106,10 @@
 
             <div class="row mb-2">
 
-                    <!--Gerenciar Turma // Lista de Alunos--> 
+                <!--Gerenciar Turma // Lista de Alunos--> 
                 
                 <!--Turma 01-->
-                <div class="col-md-12 col-lg-6 classroom___list">
+                <article class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 01</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -218,10 +224,10 @@
                             </tbody>
                          
                       </table>
-                </div>
+                </article>
 
                 <!--Turma 02-->
-                <div class="col-md-12 col-lg-6 classroom___list">
+                <article class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 02</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -336,11 +342,10 @@
                             </tbody>
                          
                       </table>
-                </div>
+                </article>
 
-
-            <!--Turma 03-->
-                <div class="col-md-12 col-lg-6 classroom___list">
+                <!--Turma 03-->
+                <article class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 03</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -455,54 +460,55 @@
                             </tbody>
                         
                     </table>
-                </div>
+                </article>
 
 
-                
-                
-            </div>
+              </div>
 
         </section>
 
     </main>
 
 <!--Footer-->
-    <Footer class="special__bg pt-3">
+<Footer class="special__bg pt-3">
 
-        <section class="footer__tecs d-flex justify-content-between container mt-5 mb-5">
+  <section class="footer__details d-flex justify-content-between container mt-5 mb-5">
 
-            <article class="d-flex flex-column align-items-center">
-                <p class="fs-5">Tecnologias aplicadas</p>
-                <figure class="h-50 footer__icons">
-                    <img src="./assets/html5.png" alt="Tecnologia Html5" class="footer__icon"/> 
-                    <img src="./assets/css3.png" alt="Tecnologia CSS3" class="footer__icon"/>
-                    <img src="./assets/bootstrap.png" alt="Tecnologia Bootstrap" class="footer__icon"/>
-                </figure>
-            </article>
-    
-            <article class="footer__info h-50">
-                <figure class="p-2">
-                    <img src="./assets/logofive.png" alt="logo five" class="footer__img"/>
-                </figure>
-            </article>
-        </section>
+      <article class="d-flex flex-column align-items-center">
+          <p>Tecnologias aplicadas</p>
+          <figure class="h-50 footer__icons">
+              <img src="./assets/html5.png" alt="Tecnologia Html5" class="footer__icon"/> 
+              <img src="./assets/css3.png" alt="Tecnologia CSS3" class="footer__icon"/>
+              <img src="./assets/bootstrap.png" alt="Tecnologia Bootstrap" class="footer__icon"/>
+          </figure>
+      </article>
 
-       <section class="d-flex justify-content-center align-items-center footer__copyright mt-5 pt-3">
-           <p class="p-4"><i class="fa-regular fa-copyright"></i> Desenvolvido para Estudo - Valber Junior - 2022</p>
-       </section>
+      <article class="footer__info h-50">
+          <figure class="p-2">
+              <img src="./assets/logofive.png" alt="logo five" class="footer__img"/>
+          </figure>
+      </article>
+      
+  </section>
 
-    </Footer>
+  <section class="d-flex justify-content-center align-items-center footer__copyright mt-5 pt-3">
+      <p class="p-4"><i class="fa-regular fa-copyright"></i> Desenvolvido para Estudo - Valber Junior - 2022</p>
+  </section>
+
+</Footer>
 
 
 <!--Offcanvas Exclusivo para o mobile-->
 
         <!--Menu Aside Offcanvas-->
 
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-          <div class="offcanvas-header d-flex justify-content-end">
+        <section class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+         
+          <article class="offcanvas-header d-flex justify-content-end">
             <button type="button" class="btn-close text-reset p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
+          </article>
+
+          <article class="offcanvas-body">
             
               <aside class="aside">
                   <ul class="aside__menu">
@@ -518,9 +524,8 @@
                   </ul>
               </aside>
 
-
-          </div>
-        </div>
+            </article>
+        </section>
     
 
        

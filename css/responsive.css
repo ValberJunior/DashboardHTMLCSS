@@ -1,6 +1,7 @@
 /* Breakpoints */
 
-/* Mobile*/
+/* Mobile----------------------------------------------------------------*/
+
     @media(max-width: 767.98px){
 
         /* Header */
@@ -26,7 +27,7 @@
 
 
         /* Footer */
-        footer .footer__tecs{
+        footer .footer__details{
             flex-direction: column;
         }
 
@@ -62,7 +63,8 @@
     }
 
 
-/*Tablet*/
+/*Tablet--------------------------------------------------------------*/
+
     @media(min-width: 768px) and (max-width: 1199.98px){
 
     /* Header */
@@ -126,7 +128,7 @@
         width: 120px;
     }
 
-    .footer__tecs p{
+    .footer__details p{
         font-size: 14px;
     }
 
