@@ -18,11 +18,12 @@
 - Personalizar o campo de adição de aluno ✔️
 - Listagem dos alunos ✔️
 - - animação de page not found ✔️
+- - Responsividade ✔️
+- OffCanvas ✔️
+
 
 Falta:
 
-- Responsividade
-- OffCanvas
 - SEO
 
 
