@@ -60,6 +60,8 @@ O formulário para edição dos alunos e a listagem também não necessitam esta
 <br><br>
 <h4>Obs</h4>
 <p>Todos os dados são fictícios, as ilustrações gráficas são imagens pngs, fiz uso delas para preencher o dashboard de modo que a estética ficasse mais coerente a um sistema de gerenciamento, nenhum botão tem funcionalidade, é apenas uma prática das tecnologias Html e Css, e nesse caso, com o auxílio do uso de bootstrap</p>
+<br>
+<p>Apenas as sessões "Gerenciar Turma" e "Adicionar aluno", além do link "Home", estão com algum tipo de funcionalidade, para o menu de grid reservei um modal para uma animação referente a "Erro de página não encontrada".</p>
 
 
 
