@@ -23,6 +23,7 @@ Falta:
 
 - Responsividade
 - OffCanvas
+- SEO
 
 
 
