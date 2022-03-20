@@ -76,9 +76,13 @@ header .profile__img:hover{
     opacity: 0.6;
 }
 
+.aside__menu li a{
+    text-decoration: none;
+    color: #212529;
+}
+
 .content .grid__menu{
     flex:3;
-
 }
 
 .grid__card{
@@ -95,6 +99,7 @@ header .profile__img:hover{
     color: white;
     opacity: 0.5;
 }
+
 
 .font__icon{
     font-size: 5vw;

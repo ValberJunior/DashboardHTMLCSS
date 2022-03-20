@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas Academy Five</title>
+    <!-- Icone -->
+    <link href="./assets/logo.png" rel="icon" type="image/png">
+    <!--RESET CSS-->
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!--CSS-->
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <!--FontAswome-->
+    <script src="https://kit.fontawesome.com/51d1ddecd8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<!--Header-->
+    <header class="navbar navbar-expand-lg navbar-light sticky-top special__bg">
+        <nav class="container-fluid">
+
+            <!--Logo-->
+            <section class="logo d-flex align-items-center">
+                <a class="navbar-brand" href="./index.html">
+                    <figure>
+                        <img src="./assets/logofive.png" alt="Logo da Five" class="logo__img"/>
+                    </figure>            
+                </a>
+            </section>
+
+            <!--Mobile Button-->
+            <section class="mobile__button">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </section>
+
+            <!--Menu Navbar-->
+            <section class="collapse navbar-collapse justify-content-end me-2" id="navbarNav">
+
+                    <ul class="navbar-nav align-items-center justify-content-xl-center ps-4">
+
+                        <li class="nav-item me-2 fs-5">
+                                <figure class="profile d-flex align-items-center">
+                                    <img src="./assets/profile.jpg" alt="Imagem de Perfil" class="profile__img"/>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Maria Aparecida Fernandes
+                                        </a>
+                                        <ul class="dropdown-menu sub__menu" aria-labelledby="navbarDropdownMenuLink">
+                                          <li><a class="dropdown-item fs-5" href="#"><i class="fa-solid fa-arrow mb-2s-rotate text-info me-3"></i> Trocar usuário</a></li>
+                                          <li><a class="dropdown-item fs-5" href="#"><i class="fa-solid fa-right-from-bracket text-info me-3"></i> Sair</a></li>
+                                        </ul>
+                                      </li>
+                                </figure>
+                        </li>
+
+            
+                    </ul>
+            </section>
+
+        </nav>
+    </header> 
+
+<!-- Main -->
+    <main class="container-fluid d-flex content">
+
+        <!--aside-->
+        <aside class="aside">
+            <ul class="aside__menu">
+                <li class="text-info"><i class="fa-solid fa-circle-plus me-3"></i> Criar turma</li>
+                <li><a href="./index.html"><i class="fa-solid fa-house me-3"></i> Home</li></a>
+                <li><i class="fa-solid fa-envelope"></i><span class="badge bg-danger rounded-circle me-3 p-1">14</span> Mensagens</li>
+                <li><i class="fa-solid fa-gear me-3"></i> Ajustes</li>
+                <li><i class="fa-solid fa-headset me-3"></i> Suporte</li>
+                <li><i class="fa-solid fa-calendar-days me-3"></i> Agenda</li>
+                <li> <i class="fa-solid fa-chart-column me-3"></i> PDI</li>
+                <li><i class="fa-solid fa-triangle-exclamation me-3"></i> Avisos</li>
+                <li><i class="fa-solid fa-bars-progress me-3"></i> Plano de Estudos</li>
+            </ul>
+        </aside>
+
+        <!-- Turmas -->
+        <section class="container grid__menu pt-4 pb-5 bg-light">
+
+            <div class="row mb-2">
+
+                    <!--Gerenciar Turma // Lista de Alunos--> 
+                
+                <!--Turma 01-->
+                <div class="col-sm-6">
+                    <h2>Turma 01</h2>
+                    <table class="table table-secondary table-striped">
+                    
+                            <thead class="table-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome Completo</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Função</th>
+                                <th scope="col"><i class="fa-solid fa-gear"></i></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">6</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">7</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">8</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">9</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">10</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">11</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+                              <tr>
+
+                                <th scope="row">12</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <td colspan="5" class="text-end"><button class="btn btn-primary">Editar turma</button></td>
+                              
+                            </tbody>
+                         
+                      </table>
+                </div>
+
+                <!--Turma 02-->
+                <div class="col-sm-6">
+                    <h2>Turma 02</h2>
+                    <table class="table table-secondary table-striped">
+                    
+                            <thead class="table-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome Completo</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Função</th>
+                                <th scope="col"><i class="fa-solid fa-gear"></i></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">5</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">6</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">7</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">8</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">9</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">10</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <tr>
+                                <th scope="row">11</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+                              <tr>
+
+                                <th scope="row">12</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                              </tr>
+
+                              <td colspan="5" class="text-end"><button class="btn btn-primary">Editar turma</button></td>
+                              
+                            </tbody>
+                         
+                      </table>
+                </div>
+
+
+            <!--Turma 03-->
+                <div class="col-sm-6">
+                    <h2>Turma 03</h2>
+                    <table class="table table-secondary table-striped">
+                    
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome Completo</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Função</th>
+                                <th scope="col"><i class="fa-solid fa-gear"></i></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>BackEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>Devops</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">11</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+                            <tr>
+
+                                <th scope="row">12</th>
+                                <td>Nome Completo do Aluno</td>
+                                <td>exemplo@email.com</td>
+                                <td>FrontEnd</td>
+                                <td><i class="fa-solid fa-user-pen"></i></td>
+                            </tr>
+
+                            <td colspan="5" class="text-end"><button class="btn btn-primary">Editar turma</button></td>
+                            
+                            </tbody>
+                        
+                    </table>
+                </div>
+
+
+                
+                
+            </div>
+
+        </section>
+
+    </main>
+
+<!--Footer-->
+    <Footer class="special__bg pt-3">
+
+        <section class="footer__tecs d-flex justify-content-between container mt-5 mb-5">
+
+            <article class="d-flex flex-column align-items-center">
+                <p class="fs-5">Tecnologias aplicadas</p>
+                <figure class="h-50 footer__icons">
+                    <img src="./assets/html5.png" alt="Tecnologia Html5" class="footer__icon"/> 
+                    <img src="./assets/css3.png" alt="Tecnologia CSS3" class="footer__icon"/>
+                    <img src="./assets/bootstrap.png" alt="Tecnologia Bootstrap" class="footer__icon"/>
+                </figure>
+            </article>
+    
+            <article class="footer__info h-50">
+                <figure class="p-2">
+                    <img src="./assets/logofive.png" alt="logo five" class="footer__img"/>
+                </figure>
+            </article>
+        </section>
+
+       <section class="d-flex justify-content-center align-items-center footer__copyright mt-5 pt-3">
+           <p class="p-4"><i class="fa-regular fa-copyright"></i> Desenvolvido para Estudo - Valber Junior - 2022</p>
+       </section>
+
+    </Footer>
+    
+
+       
+    <!-- Script bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
