@@ -17,11 +17,10 @@
 - Observações ✔️
 - Personalizar o campo de adição de aluno ✔️
 - Listagem dos alunos ✔️
+- - animação de page not found ✔️
 
 Falta:
 
-
-- animação de page not found
 - Responsividade
 - OffCanvas
 
