@@ -16,11 +16,14 @@
 - Email ✔️
 - Observações ✔️
 - Personalizar o campo de adição de aluno ✔️
+- Listagem dos alunos ✔️
 
 Falta:
 
-- Listagem dos alunos 
+
 - animação de page not found
+- Responsividade
+- OffCanvas
 
 
 
