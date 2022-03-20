@@ -70,10 +70,11 @@ header .profile__img{
 }
 
 .content .grid__menu{
-    flex:3;
+    flex:2;
 }
 
 .grid__card{
+
     height: 10rem;
     cursor: pointer;
     margin: 10px;
@@ -108,4 +109,20 @@ header .profile__img{
 
 .modal__settings{
     max-width: 50vw;
+}
+
+.list-group__title{
+    font-weight: bold;
+    color: #555;
+    background-color: #e7e5e5;
+}
+
+.modal__classroom li{
+    cursor: pointer;
+}
+
+.modal__classroom li:hover{
+    opacity: 0.9;
+    color: #6accf0;
+    background-color: aliceblue;
 }
