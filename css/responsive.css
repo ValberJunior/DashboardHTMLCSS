@@ -2,7 +2,40 @@
 
 /* Mobile*/
     @media(max-width: 767.98px){
-      
+
+        /* Header */
+        header #mobile__offcanvas{
+            display: flex;
+        }
+
+        /*Main*/
+        #main__aside{
+            display: none;
+        }
+
+        /* Footer */
+        footer .footer__tecs{
+            flex-direction: column;
+        }
+
+        footer .footer__info{
+            text-align: center;
+        }
+
+        .footer__icons .footer__icon{
+            width: 30px;
+            height: 30px;
+        }
+        
+        .footer__img{
+            width: 110px;
+            margin-top: 30px;
+        }
+
+        .footer__copyright p {
+            font-size: 12px;
+        }
+
     }
 
 
@@ -55,19 +88,7 @@
     .grid__card h5 .grid__rotule{
         margin: 10px 0px 0px 0px;
     }
-    
-    /* Footer */
 
-    .footer__icons .footer__icon{
-        width: 50px;
-        height: 50px;
-    
-        margin: 5px;
-    }
-    
-    .footer__copyright p {
-        border-top: 1px solid #5555559c;
-    }
 
     /* Footer */
 
