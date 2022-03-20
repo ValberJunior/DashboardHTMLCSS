@@ -24,6 +24,15 @@
 <header class="navbar navbar-expand-lg navbar-light sticky-top special__bg">
   <nav class="container-fluid">
 
+      <!--Offcanvas Exclusivo para Versão Mobile-->
+
+      <section class="mobile__button" id="mobile__offcanvas">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </section>
+
+
       <!--Logo-->
       <section class="logo d-flex align-items-center">
           <a class="navbar-brand" href="./index.html">
@@ -36,7 +45,7 @@
       <!--Mobile Button-->
       <section class="mobile__button">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <i class="fa-solid fa-user-large p-1"></i>
           </button>
       </section>
 
@@ -72,7 +81,7 @@
     <main class="container-fluid d-flex content">
 
       <!--aside-->
-                <aside class="aside">
+                <aside class="aside" id="main__aside">
                   <ul class="aside__menu">
                       <li class="text-info"><i class="fa-solid fa-circle-plus me-2"></i> Criar turma</li>
                       <li><a href="./index.html"><i class="fa-solid fa-house me-2"></i> Home</a></li>
@@ -94,7 +103,7 @@
                     <!--Gerenciar Turma // Lista de Alunos--> 
                 
                 <!--Turma 01-->
-                <div class="col-md-12 col-lg-6">
+                <div class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 01</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -212,7 +221,7 @@
                 </div>
 
                 <!--Turma 02-->
-                <div class="col-md-12 col-lg-6">
+                <div class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 02</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -331,7 +340,7 @@
 
 
             <!--Turma 03-->
-                <div class="col-md-12 col-lg-6">
+                <div class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 03</h2>
                     <table class="table table-secondary table-striped">
                     
@@ -483,6 +492,35 @@
        </section>
 
     </Footer>
+
+
+<!--Offcanvas Exclusivo para o mobile-->
+
+        <!--Menu Aside Offcanvas-->
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header d-flex justify-content-end">
+            <button type="button" class="btn-close text-reset p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            
+              <aside class="aside">
+                  <ul class="aside__menu">
+                      <li class="text-info"><a href="./index.html"><i class="fa-solid fa-house me-2"></i> Home</li></a>
+                      <li><i class="fa-solid fa-envelope me-2"></i>Mensagens</li>
+                      <li><i class="fa-solid fa-gear me-2"></i> Ajustes</li>
+                      <li><i class="fa-solid fa-headset me-2"></i> Suporte</li>
+                      <li><i class="fa-solid fa-calendar-days me-2"></i> Agenda</li>
+                      <li> <i class="fa-solid fa-chart-column me-2"></i> PDI</li>
+                      <li><i class="fa-solid fa-triangle-exclamation me-2"></i> Avisos</li>
+                      <li><i class="fa-solid fa-circle-plus me-2"></i> Criar turma</li>
+                      <li><i class="fa-solid fa-bars-progress me-2"></i> Plano de Estudos</li>
+                  </ul>
+              </aside>
+
+
+          </div>
+        </div>
     
 
        

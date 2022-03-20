@@ -13,6 +13,18 @@
             display: none;
         }
 
+        /*Listagem de Turmas*/
+
+        .classroom___list{
+            overflow-x: scroll;
+        }
+
+        .classroom___list table{
+            width: 700px;
+            margin-bottom: 30px;
+        }
+
+
         /* Footer */
         footer .footer__tecs{
             flex-direction: column;
@@ -34,6 +46,17 @@
 
         .footer__copyright p {
             font-size: 12px;
+        }
+
+
+        /* Modals */
+
+        .modal__settings{
+            max-width: 100vw;
+        }
+
+        .erro__img{
+            width: 100%;
         }
 
     }
