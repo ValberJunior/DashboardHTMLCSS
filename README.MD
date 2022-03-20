@@ -15,10 +15,10 @@
 - Celular ✔️
 - Email ✔️
 - Observações ✔️
+- Personalizar o campo de adição de aluno ✔️
 
 Falta:
 
-- Personalizar o campo de adição de aluno
 - Listagem dos alunos 
 - animação de page not found
 
