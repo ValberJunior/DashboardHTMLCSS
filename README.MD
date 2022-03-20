@@ -55,10 +55,11 @@ O formulário para edição dos alunos e a listagem também não necessitam esta
 <br>
 
 
-
 ![screencapture-127-0-0-1-5500-classroom-html-2022-03-20-17_59_01](https://user-images.githubusercontent.com/84424883/159185758-b9b53528-2b4f-41f2-8d1e-7a4f1daa2de7.png)
 
-
+<br><br>
+<h4>Obs</h4>
+<p>Todos os dados são fictícios, as ilustrações gráficas são imagens pngs, fiz uso delas para preencher o dashboard de modo que a estética ficasse mais coerente a um sistema de gerenciamento, nenhum botão tem funcionalidade, é apenas uma prática das tecnologias Html e Css, e nesse caso, com o auxílio do uso de bootstrap</p>
 
 
 
