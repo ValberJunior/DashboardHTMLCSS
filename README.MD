@@ -1,6 +1,33 @@
-<h1>Projeto de Html e CSS</h1>
+<h1>Upgrade do Dashboard</h1>
 
-<h2>Objetivo</h2>
+<h2>Novo Objetivo</h2>
+
+Nesse exercício de Javascript você vai precisar usar os conhecimentos aprendidos para continuar a auxiliar a Five Academy a desenvolver um sistema para gerenciar as turmas da academia.
+
+Sua missão agora será:
+
+1- Ajustar as validações do formulário para cadastro de alunos.
+
+2- Também será necessário buscar a listagem de alunos de um servidor, bem como enviar ao servidor os novos alunos cadastrados e os alterados.
+Você vai implementar os seguintes requisitos:
+
+* Buscar a listagem de alunos de https://five-turma-3.herokuapp.com/alunos (GET)
+- Ao clicar sobre um aluno deve carregar o formulário com os dados deste aluno https://five-turma-3.herokuapp.com/alunos/:id_aluno (GET)
+- Enviar um novo aluno para >> https://five-turma-3.herokuapp.com/alunos (POST)
+- Enviar os dados de um aluno alterado para  https://five-turma-3.herokuapp.com/alunos (PATCH)
+
+- O formulário não poderá ser enviado se o campos Nome, CPF, Data Nascimento, Telefone não contiverem valor
+- O campo de email deve validar se o conteúdo é um email válido
+- O campo de CPF deve validar se é um CPF válido
+- O campo de Data de Nascimento deve possuir máscara de data e validar se é uma data válida 
+- O campo de telefone deve possuir uma máscara no formato (00) 0000-0000
+
+- O campo de CEP deve buscar o CEP digitado em https://viacep.com.br/ws/CEP_DIGITADO_AQUI/json/
+Com o retorno do CEP deve preencher os campos endereço, bairro, cidade, estado  ✅
+
+
+
+<h2>Objetivo anterior</h2>
 
   Nesse exercício de HTML e CSS, você vai precisar usar os conhecimentos aprendidos para auxiliar a Five Academy a desenvolver um sistema para gerenciar as turmas da academia.
 Sua missão será construir o formulário para cadastro de alunos e a listagem dos alunos cadastrados.
