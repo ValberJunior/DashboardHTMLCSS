@@ -1,3 +1,5 @@
+export const ADDESTUDANTE = document.querySelector("#addEstudante");
+export const GERENCIARTURMA = document.querySelector("#gerenciarTurma");
 export const FORM = document.querySelector("#formulario");
 export const NOME = document.querySelector("#nome");
 export const CPF = document.querySelector("#cpf");
@@ -16,3 +18,6 @@ export const FUNCAO = document.querySelector("#funcao");
 export const COMENTARIOS = document.querySelector("#comentarios");
 export const ENVIAR = document.querySelector("#botaoEnviar");
 
+//página Turmas
+
+export let tdbody = document.querySelector("#tdBody");
