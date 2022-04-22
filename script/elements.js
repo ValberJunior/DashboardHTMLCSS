@@ -3,9 +3,13 @@ export const GERENCIARTURMA = document.querySelector("#gerenciarTurma");
 export const FORM = document.querySelector("#formulario");
 export const NOME = document.querySelector("#nome");
 export const CPF = document.querySelector("#cpf");
+export const LABELCPF = document.querySelector("#labelCPF");
 export const DATANASC = document.querySelector("#dataNascimento");
+export const LABELDATA = document.querySelector("#labelData");
 export const EMAIL = document.querySelector("#email");
+export const LABELEMAIL = document.querySelector("#labelEmail");
 export const TELEFONE = document.querySelector("#telefone");
+export const LABELTEL = document.querySelector("#labelTel");
 export const LOGRADOURO = document.querySelector("#logradouro");
 export const NUMERO = document.querySelector("#numero");
 export const COMPLEMENTO = document.querySelector("#complemento");
@@ -18,6 +22,11 @@ export const FUNCAO = document.querySelector("#funcao");
 export const COMENTARIOS = document.querySelector("#comentarios");
 export const ENVIAR = document.querySelector("#botaoEnviar");
 
+
 //página Turmas
 
+export let headerInfo = document.querySelector("#headerInfo");
+export let informacoes = document.querySelector("#informacoes");
+export const LOADING = document.querySelector("#loading");
+export const LOADINGINFO = document.querySelector("#loadingInfo");
 export let tdbody = document.querySelector("#tdBody");

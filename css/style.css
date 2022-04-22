@@ -170,3 +170,43 @@ header #mobile__offcanvas{
 .erro__img{
     width: 80%;
 }
+
+/* Modal Info Aluno */
+
+
+.infoAluno-logo{
+    width: 50px;
+
+}
+
+.infoAluno-nome{
+
+    width: 60%;
+    overflow: hidden;
+
+}
+
+.infoAluno-imagem{
+    width: 190px;
+    height: 190px;
+    background-size: cover;
+    border-radius: 50%;
+
+    box-shadow: 5px 0.5px 5px #21252973;
+
+    position: absolute;
+    top: 1%;
+    right: 5%;
+
+}
+
+/* loading */
+
+.invisivel{
+    display: none;
+}
+
+#loadingInfo img {
+        position: relative;
+        left: 13%;
+}

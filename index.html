@@ -192,6 +192,7 @@
 <!--Footer-->
     <footer class="special__bg pt-3">
 
+
         <section class="footer__details d-flex justify-content-between container mt-5 mb-5">
 
             <article class="d-flex flex-column align-items-center">
@@ -254,16 +255,16 @@
                                         <div class="col-md">
                                         <div class="form-floating">
                                             <!--CPF-->
-                                            <input type="number" class="form-control" placeholder="Digite o cpf do aluno"
+                                            <input type="text" class="form-control" placeholder="Digite o cpf do aluno"
                                             min="0" minlength="11" maxlength="14" required id="cpf" name="CPF">
-                                            <label for="cpf">Digite o CPF</label>
+                                            <label for="cpf" id="labelCPF">Digite o CPF</label>
                                         </div>
                                         </div>
                                         <div class="col-md">
                                             <div class="form-floating">
                                                 <!-- Data de Nascimento -->
-                                                <input type="date" class="form-control" placeholder="Data de nascimento" required name="NASCIMENTO" id="dataNascimento">
-                                                <label for="dataNascimento">Data de Nascimento</label>
+                                                <input type="text" class="form-control" placeholder="MM/DD/AAAA" required name="NASCIMENTO" id="dataNascimento">
+                                                <label for="dataNascimento" id="labelData">Data de Nascimento</label>
                                             </div>
                                         </div>
                                     </div>
@@ -274,15 +275,15 @@
                                         <div class="form-floating">
                                             <!--Email-->
                                             <input type="email" class="form-control" placeholder="Digite o e-mail do aluno" required name="EMAIL" id="email">
-                                            <label for="email">Digite o E-mail</label>
+                                            <label for="email" id="labelEmail">Digite o E-mail</label>
                                         </div>
                                         </div>
                                         <div class="col-md">
                                             <div class="form-floating">
                                                 <!--Telefone-->
-                                                <input type="tel" class="form-control" placeholder="Digite o celular/telefone"
-                                                 min="0" minlength="10" maxlength="11" required name="TELEFONE" id="telefone">
-                                                <label for="telefone">Telefone ou Celular com DDD</label>
+                                                <input type="tel" class="form-control" placeholder="(xx) XXXXX-XXXX"
+                                                  minlength="14" maxlength="15" required name="TELEFONE" id="telefone">
+                                                <label for="telefone" id="labelTel">Telefone ou Celular com DDD</label>
                                             </div>
                                         </div>
                                     </div>                           
@@ -323,7 +324,7 @@
                                     <div class="col-md-3">
                                         <div class="form-floating">
                                             <!--CEP-->
-                                            <input type="number" class="form-control" placeholder="Número"
+                                            <input type="text" class="form-control" placeholder="Número"
                                             min="0" minlength="8" maxlength="10" required NAME="CPF" id="cep">
                                             <label for="cep">Digite o CEP</label>
                                         </div>
@@ -501,6 +502,7 @@
             </article>
 
         </section>
+
         
     <!-- Script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

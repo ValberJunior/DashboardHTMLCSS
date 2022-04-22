@@ -112,21 +112,30 @@
                 <article class="col-md-12 col-lg-6 classroom___list">
                     <h2>Turma 01</h2>
                     <table class="table table-secondary table-striped">
+
                     
                             <thead class="table-dark">
                               <tr>
-                                <th scope="col">#</th>
+                                <th scope="col me-2">Mat</th>
                                 <th scope="col">Nome Completo</th>
                                 <th scope="col">E-mail</th>
                                 <th scope="col">Função</th>
-                                <th scope="col"><i class="fa-solid fa-gear"></i></th>
+                                <th scope="col" class="ps-4"><i class="fa-solid fa-ellipsis"></i></th>
                               </tr>
                             </thead>
                             <tbody id="tdBody"> 
-                              <!--Alunos-->                             
+                              <!--Alunos--> 
+
+                                                           
                             </tbody>
                          
                       </table>
+
+                      <div id="loading">
+                                 
+                        <img src="./assets/loading.gif" />
+                
+                       </div> 
                 </article>
                             </tbody>
                         
@@ -136,10 +145,10 @@
 
               </div>
 
-              <div class=" d-flex justify-content-around mt-5">
+              <div class=" d-flex justify-content-start mt-5">
                 <a href="./index.html" type="button" class="btn btn-lg btn-secondary"><i class="fa-solid fa-rotate-left"></i> Voltar</a>
-                <button type="button" class="btn btn-lg btn-primary"> <i class="fa-solid fa-circle-plus"></i> Nova Turma</button>
-            </div>
+                <button type="button" class="btn btn-lg btn-primary ms-3"> <i class="fa-solid fa-circle-plus"></i> Nova Turma</button>
+              </div>
 
         </section>
 
@@ -172,6 +181,44 @@
   </section>
 
 </footer>
+
+<!--Modal com as informações do usuário-->
+
+<div class="modal fade" id="visualizarAluno" tabindex="-1" >
+    <div class="modal-dialog modal__settings">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img src="./assets/logo.png" class="infoAluno-logo"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="document.location.reload(true)"></button>
+        </div>
+        <div class="modal-body p-3" id="infoAluno">
+
+          <div id="headerInfo">
+                <!--Cabeçalho com Nome e foto-->
+          </div>      
+            <div id="informacoes" class="p-3">
+
+              <!-- Aqui ficarão as informações
+               de cada aluno -->
+
+               <div id="loadingInfo">
+                                 
+                <img src="./assets/loading2.gif" />
+        
+               </div> 
+
+            </div>            
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="document.location.reload(true)"><i class="fa-solid fa-arrow-left" ></i> Voltar</button>
+          <button type="button" class="btn btn-primary">Editar Aluno <i class="fa-solid fa-pen"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 
 <!--Offcanvas Exclusivo para o mobile-->
