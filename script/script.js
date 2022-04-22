@@ -1,5 +1,5 @@
 import {ADDESTUDANTE, GERENCIARTURMA, FORM, NOME, CPF, DATANASC, EMAIL, TELEFONE, LOGRADOURO
-, CEP, BAIRRO, CIDADE, ESTADO, ENVIAR, LABELCPF, LABELEMAIL, LABELDATA, LABELTEL} from "./elements.js";
+, CEP, BAIRRO, CIDADE, ESTADO, LABELCPF, LABELEMAIL, LABELDATA, LABELTEL, MATRICULA} from "./elements.js";
 
 import { listarAlunos } from "./listarAlunos.js";
 import { validarCEP } from "./validarCEP.js";
@@ -25,31 +25,30 @@ if(FORM){
 
 //eventos
 if(EMAIL){
-            EMAIL.addEventListener('input', (event)=>{
-              const email = event.target.value;
-              VerificarEmail(email);
-            });
+   EMAIL.addEventListener('input', (event)=>{
+    const email = event.target.value;
+         VerificarEmail(email);
+});
 }
 
 if(CPF){
-          CPF.addEventListener('input',(event)=>{
-            const Cpf = event.target.value;
-            MascararCPF(Cpf)
-          });
+        CPF.addEventListener('input',(event)=>{
+        const cpf = event.target.value;
+         MascararCPF(cpf);
+        });
 }
 
 if(DATANASC){
               DATANASC.addEventListener('input', (event)=>{
-                const Data = event.target.value;
-                MascararData(Data);
-              });
+               const data = event.target.value;
+                MascararData(data);
+             });
 }
 
 if(TELEFONE){
               TELEFONE.addEventListener('input', (event)=>{
-                const Tel = event.target.value;
-                console.log(Tel);
-                MascararTelefone(Tel);
+                const tel = event.target.value;
+                 MascararTelefone(tel);
               });
               
 }
@@ -95,7 +94,11 @@ Caso seja adicionado um aluno, posteriormente o usuário volte
  */
 
 if(ADDESTUDANTE){
-    ADDESTUDANTE.addEventListener("click", ResetarForm);
+    ADDESTUDANTE.addEventListener("click", ()=>{
+      ResetarForm();
+      const valor = Math.ceil(Math.random()*90000);
+      MATRICULA.value = valor;
+      });
 }
 
 

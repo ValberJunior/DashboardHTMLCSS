@@ -229,7 +229,7 @@
 
 
         <!--Inicio do FORM  -->
-                    <form class="modal-content p-3" method="POST" action="https://five-turma-3.herokuapp.com/alunos" id="formulario">
+                    <form class="modal-content p-3" method="POST" action="https://api-fiveacademy.herokuapp.com/api/novo" id="formulario">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-user-plus me-3 text-info"></i> Adicionar Aluno</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -245,25 +245,37 @@
                                         <div class="col-md">
                                         <div class="form-floating">
                                             <!--NOME-->
-                                            <input type="text" class="form-control" placeholder="Digite o nome do aluno" required id="nome" name="NOME">
+                                            <input type="text" class="form-control" placeholder="Digite o nome do aluno" required id="nome" name="nome">
                                             <label for="nome">Nome Completo</label>
                                         </div>
                                         </div>
                                     </div>
+
+                                 <!--url da imagem-->
+                                    <div class="row mb-2 g-2">
+                                        <div class="col-md">
+                                        <div class="form-floating">
+                                            <!--IMAGEM-->
+                                            <input type="text" class="form-control" placeholder="Cole a URL da imagem" required id="imagem" name="imagem">
+                                            <label for="nome">URL da Imagem</label>
+                                        </div>
+                                        </div>
+                                    </div>
+
                                     <!--CPF e data de nascimento-->
                                     <div class="row mb-2 g-2">
                                         <div class="col-md">
                                         <div class="form-floating">
                                             <!--CPF-->
                                             <input type="text" class="form-control" placeholder="Digite o cpf do aluno"
-                                            min="0" minlength="11" maxlength="14" required id="cpf" name="CPF">
+                                            min="0" minlength="11" maxlength="14" required id="cpf" name="cpf">
                                             <label for="cpf" id="labelCPF">Digite o CPF</label>
                                         </div>
                                         </div>
                                         <div class="col-md">
                                             <div class="form-floating">
                                                 <!-- Data de Nascimento -->
-                                                <input type="text" class="form-control" placeholder="MM/DD/AAAA" required name="NASCIMENTO" id="dataNascimento">
+                                                <input type="text" class="form-control" placeholder="MM/DD/AAAA" required name="datanasc" id="dataNascimento">
                                                 <label for="dataNascimento" id="labelData">Data de Nascimento</label>
                                             </div>
                                         </div>
@@ -274,7 +286,7 @@
                                         <div class="col-md">
                                         <div class="form-floating">
                                             <!--Email-->
-                                            <input type="email" class="form-control" placeholder="Digite o e-mail do aluno" required name="EMAIL" id="email">
+                                            <input type="email" class="form-control" placeholder="Digite o e-mail do aluno" required name="email" id="email">
                                             <label for="email" id="labelEmail">Digite o E-mail</label>
                                         </div>
                                         </div>
@@ -282,7 +294,7 @@
                                             <div class="form-floating">
                                                 <!--Telefone-->
                                                 <input type="tel" class="form-control" placeholder="(xx) XXXXX-XXXX"
-                                                  minlength="14" maxlength="15" required name="TELEFONE" id="telefone">
+                                                  minlength="14" maxlength="16" required name="telefone" id="telefone">
                                                 <label for="telefone" id="labelTel">Telefone ou Celular com DDD</label>
                                             </div>
                                         </div>
@@ -297,14 +309,14 @@
                                     <div class="col-md-10">
                                     <div class="form-floating">
                                         <!--logradouro-->
-                                        <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required name="LOGRADOURO">
+                                        <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required name="logradouro">
                                         <label for="logradouro">Logradouro</label>
                                     </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-floating">
                                             <!--Número-->
-                                            <input type="number" class="form-control" id="numero" placeholder="Número" name="NUMERO"
+                                            <input type="number" class="form-control" id="numero" placeholder="Número" name="numero"
                                             min="0" minlength="1" maxlength="5" required>
                                             <label for="numero">Número</label>
                                         </div>
@@ -316,7 +328,7 @@
                                      <div class="col-md-9">
                                         <div class="form-floating">
                                             <!--Complemento-->
-                                            <input type="text" class="form-control" id="complemento" placeholder="Complemento" name="COMPLEMENTO">
+                                            <input type="text" class="form-control" id="complemento" placeholder="Complemento" name="complemento">
                                             <label for="complemento">Complemento</label>
                                         </div>
                                     </div>
@@ -325,7 +337,7 @@
                                         <div class="form-floating">
                                             <!--CEP-->
                                             <input type="text" class="form-control" placeholder="Número"
-                                            min="0" minlength="8" maxlength="10" required NAME="CPF" id="cep">
+                                            min="0" minlength="8" maxlength="10" required name="cep" id="cep">
                                             <label for="cep">Digite o CEP</label>
                                         </div>
                                     </div>
@@ -338,7 +350,7 @@
                                         <div class="form-floating">
                                             <!--Bairro-->
                                             <input type="text" class="form-control"  placeholder="Digite o Bairro" 
-                                            name="BAIRRO" id="bairro" required>
+                                            name="bairro" id="bairro" required>
                                             <label for="bairro">Digite o Bairro</label>
                                         </div>
                                     </div>
@@ -347,7 +359,7 @@
                                       <div class="form-floating">
                                         <!--Cidade-->
                                         <input type="text" class="form-control" placeholder="Digite a Cidade" 
-                                        required name="CIDADE" id="cidade">
+                                        required name="cidade" id="cidade">
                                         <label for="cidade">Digite a Cidade</label>
                                       </div>
                                     </div>
@@ -355,7 +367,7 @@
                                       <div class="form-floating">
                                         <!-- Estado -->
                                         <select class="form-select" aria-label="Floating label select state" 
-                                        name="ESTADO" id="estado" required>
+                                        name="estado" id="estado" required>
                                           <option selected>Selecione</option>
                                           <option value="AC">AC</option>
                                           <option value="AL">AL</option>
@@ -400,12 +412,12 @@
                                         <div class="form-floating">
                                         <!-- Turma -->
                                         <select class="form-select" aria-label="Floating label select classroom"
-                                         required name="TURMA" id="turma">
+                                         required name="turma" id="turma">
                                             <option selected>Selecione a turma</option>
-                                            <option value="1">Turma 01</option>
-                                            <option value="2">Turma 02</option>
-                                            <option value="3">Turma 03</option>
-                                            <option value="4">Reserva</option>
+                                            <option value="Turma 01">Turma 01</option>
+                                            <option value="Turma 02">Turma 02</option>
+                                            <option value="Turma 03">Turma 03</option>
+                                            <option value="Turma 04">Reserva</option>
                                         </select>
                                         <label for="turma">Turma</label>
                                         </div>
@@ -415,20 +427,30 @@
                                         <div class="form-floating">
                                          <!--Função-->   
                                         <select class="form-select" aria-label="Floating label select function"
-                                        required  name="FUNCAO" id="funcao" >
+                                        required  name="funcao" id="funcao" >
                                             <option selected>Selecione a função</option>
-                                            <option value="1">FrontEnd</option>
-                                            <option value="2">BackEnd</option>
-                                            <option value="3">DevOps</option>
+                                            <option value="FrontEnd">FrontEnd</option>
+                                            <option value="BackEnd">BackEnd</option>
+                                            <option value="DevOps">DevOps</option>
                                         </select>
                                         <label for="funcao">Função</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                         <!--matricula-->   
+                                             <input type="text" class="form-control text-center text-primary"  placeholder="Matricula gerada" 
+                                             name="matricula" id="matricula">
+                                             <label for="matricula">Matrícula do Aluno</label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!--Comentários-->
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Escreva um comentário" id="comentarios" name="COMENTARIOS"></textarea>
+                                    <textarea class="form-control" placeholder="Escreva um comentário" id="comentarios" name="comentarios"></textarea>
                                     <label for="comentarios">Comentário</label>
                                   </div>
                             </fieldset>

@@ -32,10 +32,10 @@ function montarTabela(data){
         alunos.map((item)=>{
             tdbody.innerHTML += `
                                 <tr>
-                                      <th scope="row">${item.registro}</th>
+                                      <th scope="row">${item.matricula}</th>
                                       <td>${item.nome}</td>
                                       <td>${item.email}</td>
-                                      <td>Estagiário</td>
+                                      <td>${item.funcao}</td>
                                       <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#visualizarAluno"
                                       id="visualizar" filter="${item._id}"><i class="fa-solid fa-eye"></i></button></td>
                                       
@@ -82,8 +82,8 @@ function montarTabela(data){
 
 async function filtrarAluno(valor){
 
-    const ID = valor;
-    const response = await fetch(`https://api-fiveacademy.herokuapp.com/api/alunos/${ID}`);
+    const URL = `https://api-fiveacademy.herokuapp.com/api/alunos/${valor}`
+    const response = await fetch(URL);
 
 
     if (!response.ok) {
@@ -104,12 +104,13 @@ async function filtrarAluno(valor){
             const cep = aluno.cep;
             const cidade = aluno.cidade;
             const logradouro = aluno.logradouro;
+            const complemento = aluno.complemento;
             const estado = aluno.estado;
             const turma = aluno.turma;
             const funcao = aluno.funcao;
             const imagem = aluno.imagem;
-            const obs = aluno.comentario;
-            const registro = aluno.registro;
+            const obs = aluno.comentarios;
+            const matricula = aluno.matricula;
     
 
             LOADINGINFO.classList.add("invisivel");
@@ -123,23 +124,23 @@ async function filtrarAluno(valor){
 
                     informacoes.innerHTML = `
                                         <label class="text-secondary">Matricula</label>
-                                        <p>${registro}</p>
+                                        <p>${matricula}</p>
 
                                         <label class="text-secondary">Email</label>
-                                        <p>${ email !== "" ? email : "Definir Email" }</p>
+                                        <p>${email}</p>
 
                                         <label  class="text-secondary">Telefone</label>
-                                        <p>${telefone !== "" ? telefone : "Defenir Telefone" }</p>
+                                        <p>${telefone}</p>
 
                                         <label  class="text-secondary">CPF</label>
-                                        <p>${ cpf !== "" ? cpf : "Definir CPF"}</p>
+                                        <p>${cpf}</p>
 
                                         <label  class="text-secondary">Data de Nascimento</label>
-                                        <p>${ datanasc !== "" ? datanasc : "Definir Data de Nascimento"}</p>
+                                        <p>${datanasc}</p>
 
                                         <h5>Endereço</h5>
                                         <label  class="text-secondary">Logradouro</label>
-                                        <p>${logradouro !== "" ? logradouro : "Definir endereço"} - Número: ${numero}, cep: ${cep}, ${bairro}, ${cidade} - ${estado} </p>
+                                        <p>${logradouro} - Número ${numero}, ${complemento!==""?complemento:null} / cep ${cep}, ${bairro} - ${cidade} - ${estado} </p>
 
                                         <label  class="text-secondary">Turma</label>
                                         <p> ${turma !== "" ? turma : "Defenir Turma" }</p>
