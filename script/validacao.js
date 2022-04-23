@@ -1,4 +1,4 @@
-import {ADDESTUDANTE, GERENCIARTURMA, FORM, NOME, CPF, LABELCPF, DATANASC, EMAIL, LABELEMAIL, TELEFONE, LABELTEL, LOGRADOURO
+import { GERENCIARTURMA, FORM, NOME, CPF, LABELCPF, DATANASC, EMAIL, LABELEMAIL, TELEFONE, LABELTEL, LOGRADOURO
   , NUMERO, COMPLEMENTO, CEP, BAIRRO, CIDADE, ESTADO, TURMA, 
   FUNCAO, COMENTARIOS, LABELDATA} from "./elements.js";
 
@@ -43,7 +43,7 @@ export function MascararData(data){
 
 //Mascarar o número de Telefone
 export function MascararTelefone(tel){      
-     FormatarNumeroTelefone(tel, TELEFONE, LABELTEL);
+     FormatarNumeroTelefone(tel, TELEFONE);
      ValidarCampo(TELEFONE, LABELTEL);
 }
 
@@ -57,7 +57,6 @@ let telefoneValidado = TEL.replace(/\D/g,""); //Remover o que não é dígito
     telefoneValidado = telefoneValidado.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
      telefoneValidado = telefoneValidado.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
 
-    console.log(telefoneValidado);
      ELEMENTO.value = telefoneValidado;
 
 }
@@ -148,7 +147,7 @@ function ValidarCampo(elemento, label){
   const LABEL = label;
 
     switch (NAME) {
-      case "CPF":
+      case "cpf":
           if(ELEMENTO.length < 11 || ELEMENTO.length > 14){
             LABEL.style.color = "red";
             LABEL.textContent = "CPF inválido";
@@ -158,8 +157,7 @@ function ValidarCampo(elemento, label){
           }       
         break;
 
-        case "TELEFONE":
-         console.log(`É um telefone com: ${ELEMENTO.length} dígitos`); 
+        case "telefone":
           if(ELEMENTO.length < 14 || ELEMENTO.length > 15){
             LABEL.style.color = "red";
             LABEL.textContent = "Número inválido";
@@ -169,8 +167,7 @@ function ValidarCampo(elemento, label){
           }         
          break;
 
-        case "NASCIMENTO":
-          console.log(`É uma data com: ${ELEMENTO.length} dígitos`);  
+        case "datanasc": 
             if(ELEMENTO.length < 10 || ELEMENTO.length > 11){
               LABEL.style.color = "red";
               LABEL.textContent = "Data inválida";

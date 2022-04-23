@@ -1,4 +1,4 @@
-export const ADDESTUDANTE = document.querySelector("#addEstudante");
+export const SECAOADDALUNO = document.querySelector("#secaoAddAluno");
 export const GERENCIARTURMA = document.querySelector("#gerenciarTurma");
 export const FORM = document.querySelector("#formulario");
 export const NOME = document.querySelector("#nome");
@@ -22,6 +22,7 @@ export const TURMA = document.querySelector("#turma");
 export const FUNCAO = document.querySelector("#funcao");
 export const COMENTARIOS = document.querySelector("#comentarios");
 export const MATRICULA = document.querySelector("#matricula");
+export const ADDALUNO = document.querySelector("#botãoAddAluno");
 
 
 

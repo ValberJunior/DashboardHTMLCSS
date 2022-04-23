@@ -109,7 +109,7 @@
                 <!-- Gerenciar Turma // Lista de Alunos--> 
                 
                 <!--Turma 01-->
-                <article class="col-md-12 col-lg-6 classroom___list">
+                <article class="col-md-12 col-lg-8 classroom___list">
                     <h2>Turma 01</h2>
                     <table class="table table-secondary table-striped">
 
@@ -189,11 +189,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel"><img src="./assets/logo.png" class="infoAluno-logo"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="document.location.reload(true)" ></button>
         </div>
         <div class="modal-body p-3" id="infoAluno">
 
-          <div id="headerInfo">
+          <div id="headerInfo" class="nomeEfoto">
                 <!--Cabeçalho com Nome e foto-->
           </div>      
             <div id="informacoes" class="p-3">
@@ -211,7 +211,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" ><i class="fa-solid fa-arrow-left" ></i> Voltar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="document.location.reload(true)" ><i class="fa-solid fa-arrow-left" ></i> Voltar</button>
           <button type="button" class="btn btn-primary">Editar Aluno <i class="fa-solid fa-pen"></i></button>
         </div>
       </div>

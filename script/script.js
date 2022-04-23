@@ -1,9 +1,10 @@
-import {ADDESTUDANTE, GERENCIARTURMA, FORM, NOME, CPF, DATANASC, EMAIL, TELEFONE, LOGRADOURO
-, CEP, BAIRRO, CIDADE, ESTADO, LABELCPF, LABELEMAIL, LABELDATA, LABELTEL, MATRICULA} from "./elements.js";
+import {GERENCIARTURMA, FORM, IMAGEM, NOME, CPF, DATANASC, EMAIL, TELEFONE, LOGRADOURO, NUMERO
+, CEP, BAIRRO, CIDADE, ESTADO, TURMA, COMENTARIOS, LABELCPF, LABELEMAIL, LABELDATA, LABELTEL, MATRICULA, SECAOADDALUNO, FUNCAO, ADDALUNO} from "./elements.js";
 
 import { listarAlunos } from "./listarAlunos.js";
 import { validarCEP } from "./validarCEP.js";
 import { MascararCPF, MascararData, MascararTelefone, VerificarEmail} from "./validacao.js";
+
 
 
 //Retirar o submit padrão do FORM && validações do Form
@@ -15,45 +16,82 @@ O formulário não poderá ser enviado se o campos
 
 if(FORM){
           FORM.addEventListener("submit", (event)=>{
-              if( NOME.value === " " || CPF.value ===" "
-              || DATANASC.value === " " || TELEFONE === " "){
-              event.preventDefault()
+           
+              if( NOME.value === " " || CPF.value ===" "|| DATANASC.value === " " || TELEFONE === " ")
+              {
+                alert("Por gentileza, Preencha os Campos Obrigatórios!");
+                event.preventDefault();
               }
-            })
-
+          
+});
 }
+
 
 //eventos
 if(EMAIL){
    EMAIL.addEventListener('input', (event)=>{
     const email = event.target.value;
+    if(email===""){
+      ResetarCampo(EMAIL);
+      LABELEMAIL.style.color="black";
+      LABELEMAIL.textContent="Digite o Email";
+    }
+    else{
          VerificarEmail(email);
+    }
 });
 }
 
 if(CPF){
         CPF.addEventListener('input',(event)=>{
         const cpf = event.target.value;
+        if(cpf===""){
+          ResetarCampo(CPF);
+          LABELCPF.style.color = "black";
+          LABELCPF.textContent="Digite o CPF";
+        }
+        else{
          MascararCPF(cpf);
-        });
+        }
+     });
 }
 
 if(DATANASC){
               DATANASC.addEventListener('input', (event)=>{
                const data = event.target.value;
+               if(data===""){
+                 ResetarCampo(DATANASC);
+                 LABELDATA.style.color="black";
+                 LABELDATA.textContent="Data de Nascimento";
+               }
+               else{
                 MascararData(data);
-             });
+              }
+       });
 }
 
 if(TELEFONE){
               TELEFONE.addEventListener('input', (event)=>{
                 const tel = event.target.value;
+              if(tel===""){
+                ResetarCampo(TELEFONE);
+                LABELTEL.style.color="black";
+                LABELTEL.textContent="Telefone ou Celular com DDD"
+              }
+              else{
                  MascararTelefone(tel);
-              });
+              }
+          });
               
 }
 
+//Adicionar Aluno
 
+if(ADDALUNO){
+  ADDALUNO.addEventListener('click',()=>{
+    console.log("Usuário Criado");
+  })
+}
 
 
 
@@ -93,8 +131,8 @@ Caso seja adicionado um aluno, posteriormente o usuário volte
  o form será resetado quando o elemento for clicado
  */
 
-if(ADDESTUDANTE){
-    ADDESTUDANTE.addEventListener("click", ()=>{
+if(SECAOADDALUNO){
+    SECAOADDALUNO.addEventListener("click", ()=>{
       ResetarForm();
       const valor = Math.ceil(Math.random()*90000);
       MATRICULA.value = valor;

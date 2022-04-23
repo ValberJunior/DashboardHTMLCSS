@@ -207,6 +207,7 @@ header #mobile__offcanvas{
 }
 
 #loadingInfo img {
-        position: relative;
-        left: 13%;
+        
+    margin-left: 13%;
+
 }

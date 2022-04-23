@@ -118,7 +118,7 @@
 
                 <!--Adicionar Alunos-->
                 <div class="col-md-4">
-                    <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#add__student" id="addEstudante">
+                    <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#add__student" id="secaoAddAluno">
                         <div class="card-body d-flex align-items-center justify-content-center">
                             <h5 class="card-title">
                                 <i class="fa-solid fa-user-plus text-info"></i> <span class="grid__rotule">Adicionar Aluno</span>
@@ -229,7 +229,7 @@
 
 
         <!--Inicio do FORM  -->
-                    <form class="modal-content p-3" method="POST" action="https://api-fiveacademy.herokuapp.com/api/novo" id="formulario">
+                    <form class="modal-content p-3" action="https://api-fiveacademy.herokuapp.com/api/novo" method="POST" id="formulario">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-user-plus me-3 text-info"></i> Adicionar Aluno</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -256,7 +256,7 @@
                                         <div class="col-md">
                                         <div class="form-floating">
                                             <!--IMAGEM-->
-                                            <input type="text" class="form-control" placeholder="Cole a URL da imagem" required id="imagem" name="imagem">
+                                            <input type="text" class="form-control" placeholder="Cole a URL da imagem" id="imagem" name="imagem">
                                             <label for="nome">URL da Imagem</label>
                                         </div>
                                         </div>
@@ -268,7 +268,7 @@
                                         <div class="form-floating">
                                             <!--CPF-->
                                             <input type="text" class="form-control" placeholder="Digite o cpf do aluno"
-                                            min="0" minlength="11" maxlength="14" required id="cpf" name="cpf">
+                                             minlength="11" maxlength="15" required id="cpf" name="cpf">
                                             <label for="cpf" id="labelCPF">Digite o CPF</label>
                                         </div>
                                         </div>
@@ -460,7 +460,8 @@
                         
                         <div class="modal-footer btn-group">
                             <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-lg btn-primary" id="botaoEnviar"> <i class="fa-solid fa-circle-plus"></i> Adicionar Aluno</button>
+                            <button type="reset" class="btn btn-lg btn-dark" ><i class="fa-solid fa-eraser"></i> Limpar</button>
+                            <button type="submit" class="btn btn-lg btn-primary" id="botaoAddAluno"> <i class="fa-solid fa-circle-plus"></i> Adicionar</button>
                         </div>
                     </form>
 
@@ -531,6 +532,7 @@
   
    
     <script src="./script/script.js" type="module"> </script>
+
     
 
 
