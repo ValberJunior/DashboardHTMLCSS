@@ -167,6 +167,27 @@ const editarAluno = async (id )=> {
     }else{
         
     const data = await response.json();
+
+    if(data){
+        const id = data._id;
+        const nome = data.nome;
+        const email = data.email;
+        const cpf = data.cpf;
+        const telefone = data.telefone;
+        const datanasc = data.datanasc;
+        const numero = data.numero;
+        const bairro = data.bairro;
+        const cep = data.cep;
+        const cidade = data.cidade;
+        const logradouro = data.logradouro;
+        const complemento = data.complemento;
+        const estado = data.estado;
+        const turma = data.turma;
+        const funcao = data.funcao;
+        const imagem = data.imagem;
+        const obs = data.comentarios;
+        const matricula = data.matricula;
+    }
     
     
         informacoes.innerHTML = `
@@ -184,7 +205,7 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                             <div class="form-floating">
                                                                 <!--NOME-->
-                                                                <input type="text" class="form-control" value=${data.nome} id="nome" name="nome">
+                                                                <input type="text" class="form-control" value=${nome} id="nome" name="nome">
                                                                 <label for="nome">Nome Completo</label>
                                                             </div>
                                                             </div>
@@ -195,7 +216,7 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                             <div class="form-floating">
                                                                 <!--IMAGEM-->
-                                                                <input type="text" class="form-control" value=${data.imagem} id="imagem" name="imagem">
+                                                                <input type="text" class="form-control" value=${imagem} id="imagem" name="imagem">
                                                                 <label for="nome">URL da Imagem</label>
                                                             </div>
                                                             </div>
@@ -206,7 +227,7 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                             <div class="form-floating">
                                                                 <!--ID-->
-                                                                <input type="text" class="form-control text-primary" value=${data._id} id="idAluno" name="id" readonly>
+                                                                <input type="text" class="form-control text-primary" value=${id} id="idAluno" name="id" readonly>
                                                                 <label for="nome">ID do Aluno</label>
                                                             </div>
                                                             </div>
@@ -217,7 +238,7 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                             <div class="form-floating">
                                                                 <!--CPF-->
-                                                                <input type="text" class="form-control" value=${data.cpf}
+                                                                <input type="text" class="form-control" value=${cpf}
                                                                 minlength="11" maxlength="15" id="cpf" name="cpf">
                                                                 <label for="cpf" id="labelCPF">Digite o CPF</label>
                                                             </div>
@@ -225,7 +246,7 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                                 <div class="form-floating">
                                                                     <!-- Data de Nascimento -->
-                                                                    <input type="text" class="form-control" value=${data.datanasc} name="datanasc" id="dataNascimento">
+                                                                    <input type="text" class="form-control" value=${datanasc} name="datanasc" id="dataNascimento">
                                                                     <label for="dataNascimento" id="labelData">Data de Nascimento</label>
                                                                 </div>
                                                             </div>
@@ -236,14 +257,14 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                             <div class="form-floating">
                                                                 <!--Email-->
-                                                                <input type="email" class="form-control" value=${data.email}  name="email" id="email">
+                                                                <input type="email" class="form-control" value=${email}  name="email" id="email">
                                                                 <label for="email" id="labelEmail">Digite o E-mail</label>
                                                             </div>
                                                             </div>
                                                             <div class="col-md">
                                                                 <div class="form-floating">
                                                                     <!--Telefone-->
-                                                                    <input type="tel" class="form-control" value=${data.telefone}
+                                                                    <input type="tel" class="form-control" value=${telefone}
                                                                     minlength="14" maxlength="16" name="telefone" id="telefone">
                                                                     <label for="telefone" id="labelTel">Telefone ou Celular com DDD</label>
                                                                 </div>
@@ -259,14 +280,14 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-10">
                                                         <div class="form-floating">
                                                             <!--logradouro-->
-                                                            <input type="text" class="form-control" id="logradouro" value=${data.logradouro} name="logradouro">
+                                                            <input type="text" class="form-control" id="logradouro" value=${logradouro} name="logradouro">
                                                             <label for="logradouro">Logradouro</label>
                                                         </div>
                                                         </div>
                                                         <div class="col-md-2">
                                                             <div class="form-floating">
                                                                 <!--Número-->
-                                                                <input type="number" class="form-control" id="numero" value=${data.numero} name="numero"
+                                                                <input type="number" class="form-control" id="numero" value=${numero} name="numero"
                                                                 min="0" minlength="1" maxlength="5">
                                                                 <label for="numero">Número</label>
                                                             </div>
@@ -278,7 +299,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-9">
                                                             <div class="form-floating">
                                                                 <!--Complemento-->
-                                                                <input type="text" class="form-control" id="complemento" value=${data.complemento} name="complemento">
+                                                                <input type="text" class="form-control" id="complemento" value=${complemento} name="complemento">
                                                                 <label for="complemento">Complemento</label>
                                                             </div>
                                                         </div>
@@ -286,7 +307,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-3">
                                                             <div class="form-floating">
                                                                 <!--CEP-->
-                                                                <input type="text" class="form-control" value=${data.cep}
+                                                                <input type="text" class="form-control" value=${cep}
                                                                 min="0" minlength="8" maxlength="10" name="cep" id="cep">
                                                                 <label for="cep">Digite o CEP</label>
                                                             </div>
@@ -299,7 +320,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-5">
                                                             <div class="form-floating">
                                                                 <!--Bairro-->
-                                                                <input type="text" class="form-control" value=${data.bairro} 
+                                                                <input type="text" class="form-control" value=${bairro} 
                                                                 name="bairro" id="bairro">
                                                                 <label for="bairro">Digite o Bairro</label>
                                                             </div>
@@ -308,7 +329,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-5">
                                                         <div class="form-floating">
                                                             <!--Cidade-->
-                                                            <input type="text" class="form-control"value=${data.cidade}
+                                                            <input type="text" class="form-control"value=${cidade}
                                                             name="cidade" id="cidade">
                                                             <label for="cidade">Digite a Cidade</label>
                                                         </div>
@@ -318,7 +339,7 @@ const editarAluno = async (id )=> {
                                                             <!-- Estado -->
                                                             <select class="form-select" aria-label="Floating label select state" 
                                                             name="estado" id="estado" > 
-                                                            <option value=${data.estado}>${data.estado}</option>
+                                                            <option value=${estado}>${estado}</option>
                                                             <option value="AC">AC</option>
                                                             <option value="AL">AL</option>
                                                             <option value="AP">AP</option>
@@ -363,7 +384,7 @@ const editarAluno = async (id )=> {
                                                             <!-- Turma -->
                                                             <select class="form-select" aria-label="Floating label select classroom"
                                                              name="turma" id="turma" >
-                                                                <option value=${data.turma}>${data.turma}</option>
+                                                                <option value=${turma}>${turma}</option>
                                                                 <option value="Turma 01">Turma 01</option>
                                                                 <option value="Turma 02">Turma 02</option>
                                                                 <option value="Turma 03">Turma 03</option>
@@ -378,7 +399,7 @@ const editarAluno = async (id )=> {
                                                             <!--Função-->   
                                                             <select class="form-select" aria-label="Floating label select function"
                                                               name="funcao" id="funcao"  >
-                                                                <option value=${data.funcao}> ${data.funcao}</option>
+                                                                <option value=${funcao}> ${funcao}</option>
                                                                 <option value="FrontEnd">FrontEnd</option>
                                                                 <option value="BackEnd">BackEnd</option>
                                                                 <option value="DevOps">DevOps</option>
@@ -391,7 +412,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md">
                                                             <div class="form-floating">
                                                             <!--ID-->   
-                                                                <input type="text" class="form-control text-center text-primary"  value=${data.matricula} 
+                                                                <input type="text" class="form-control text-center text-primary"  value=${matricula} 
                                                                 name="matricula" id="matricula" readonly>
                                                                 <label for="matricula">Matrícula do Aluno</label>
                                                            
@@ -401,7 +422,7 @@ const editarAluno = async (id )=> {
 
                                                     <!--Comentários-->
                                                     <div class="form-floating mb-4">
-                                                        <textarea class="form-control" value=${data.comentarios} id="comentarios" name="comentarios"></textarea>
+                                                        <textarea class="form-control" value=${comentarios} id="comentarios" name="comentarios"></textarea>
                                                         <label for="comentarios">Comentário</label>
                                                     </div>
                                                 </fieldset>

@@ -1,5 +1,5 @@
-import {GERENCIARTURMA, FORM, IMAGEM, NOME, CPF, DATANASC, EMAIL, TELEFONE, LOGRADOURO, NUMERO
-, CEP, BAIRRO, CIDADE, ESTADO, TURMA, COMENTARIOS, LABELCPF, LABELEMAIL, LABELDATA, LABELTEL, MATRICULA, SECAOADDALUNO, FUNCAO, ADDALUNO} from "./elements.js";
+import {GERENCIARTURMA, FORM,  NOME, CPF, DATANASC, EMAIL, TELEFONE, LOGRADOURO
+, CEP, BAIRRO, CIDADE, ESTADO, LABELCPF, LABELEMAIL, LABELDATA, LABELTEL, MATRICULA, SECAOADDALUNO} from "./elements.js";
 
 import { listarAlunos } from "./listarAlunos.js";
 import { validarCEP } from "./validarCEP.js";
@@ -7,7 +7,6 @@ import { MascararCPF, MascararData, MascararTelefone, VerificarEmail} from "./va
 
 
 
-//Retirar o submit padrão do FORM && validações do Form
 
 /*
 O formulário não poderá ser enviado se o campos
@@ -85,14 +84,6 @@ if(TELEFONE){
               
 }
 
-//Adicionar Aluno                     //apagar esse trecho depois
-
-if(ADDALUNO){
-  ADDALUNO.addEventListener('click',()=>{
-    console.log("Usuário Criado");
-  })
-}
-
 
 
 //Resetar os campos do formulário;
@@ -113,7 +104,7 @@ const ResetarForm = ()=>{
         LABELTEL.style.color = "black";
         LABELTEL.textContent="Telefone ou Celular com DDD";
 
-         FORM.reset(); // Não está resetando
+         FORM.reset(); 
 }
 
 const ResetarCampo = (elemento)=>{
