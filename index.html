@@ -105,8 +105,9 @@
 
             <article class="row mb-2">
 
+                <!--Gerenciar Turmas-->
                 <div class="col-md-4">
-                        <div class="card grid__card" id="card__classroom">
+                        <div class="card grid__card" id="gerenciarTurma">
                             <div class="card-body d-flex align-items-center justify-content-center">
                                 <h5 class="card-title">
                                     <i class="fa-solid fa-people-roof text-info"></i> <span class="grid__rotule">Gerenciar Turmas</span>
@@ -115,8 +116,9 @@
                         </div>
                 </div>
 
+                <!--Adicionar Alunos-->
                 <div class="col-md-4">
-                    <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#add__student">
+                    <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#add__student" id="secaoAddAluno">
                         <div class="card-body d-flex align-items-center justify-content-center">
                             <h5 class="card-title">
                                 <i class="fa-solid fa-user-plus text-info"></i> <span class="grid__rotule">Adicionar Aluno</span>
@@ -125,7 +127,7 @@
                     </div>
                 </div>
 
-
+                <!--Atividades-->
                 <div class="col-md-4">
                     <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#erropage">
                         <div class="card-body d-flex align-items-center justify-content-center">
@@ -136,6 +138,7 @@
                     </div>
                 </div>
 
+                <!--Grade de Horários-->
                 <div class="col-md-4">
                     <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#erropage">
                         <div class="card-body d-flex align-items-center justify-content-center">
@@ -146,6 +149,7 @@
                     </div>
                 </div>
 
+                <!--Performance-->
                 <div class="col-md-4">
                     <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#erropage">
                         <div class="card-body d-flex align-items-center justify-content-center">
@@ -156,6 +160,7 @@
                     </div>
                 </div>
 
+                <!--Buscar-->
                 <div class="col-md-4">
                     <div class="card grid__card" data-bs-toggle="modal" data-bs-target="#erropage">
                         <div class="card-body d-flex align-items-center justify-content-center">
@@ -186,6 +191,7 @@
 
 <!--Footer-->
     <footer class="special__bg pt-3">
+
 
         <section class="footer__details d-flex justify-content-between container mt-5 mb-5">
 
@@ -220,8 +226,10 @@
         <section class="modal fade" id="add__student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 <article class="modal-dialog modal__settings">
-                    
-                    <div class="modal-content p-3">
+
+
+        <!--Inicio do FORM  -->
+                    <form class="modal-content p-3" action="https://api-fiveacademy.herokuapp.com/api/novo" method="POST" id="formulario">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-user-plus me-3 text-info"></i> Adicionar Aluno</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -231,28 +239,44 @@
 
                             <fieldset id="personal__data">
                                 <legend class="text-secondary mb-2 mt-2">Dados Pessoais</legend>
+                                
                                     <!--Nome-->
                                     <div class="row mb-2 g-2">
                                         <div class="col-md">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Digite o nome do aluno" required>
-                                            <label for="floatingInputGrid">Nome Completo</label>
+                                            <!--NOME-->
+                                            <input type="text" class="form-control" placeholder="Digite o nome do aluno" required id="nome" name="nome">
+                                            <label for="nome">Nome Completo</label>
                                         </div>
                                         </div>
                                     </div>
+
+                                 <!--url da imagem-->
+                                    <div class="row mb-2 g-2">
+                                        <div class="col-md">
+                                        <div class="form-floating">
+                                            <!--IMAGEM-->
+                                            <input type="text" class="form-control" placeholder="Cole a URL da imagem" id="imagem" name="imagem">
+                                            <label for="nome">URL da Imagem</label>
+                                        </div>
+                                        </div>
+                                    </div>
+
                                     <!--CPF e data de nascimento-->
                                     <div class="row mb-2 g-2">
                                         <div class="col-md">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="floatingInputGrid" placeholder="Digite o cpf do aluno"
-                                            min="0" minlength="11" maxlength="14" required>
-                                            <label for="floatingInputGrid">Digite o CPF</label>
+                                            <!--CPF-->
+                                            <input type="text" class="form-control" placeholder="Digite o cpf do aluno"
+                                             minlength="11" maxlength="15" required id="cpf" name="cpf">
+                                            <label for="cpf" id="labelCPF">Digite o CPF</label>
                                         </div>
                                         </div>
                                         <div class="col-md">
                                             <div class="form-floating">
-                                                <input type="date" class="form-control" id="floatingInputGrid" placeholder="Data de nascimento"required>
-                                                <label for="floatingInputGrid">Data de Nascimento</label>
+                                                <!-- Data de Nascimento -->
+                                                <input type="text" class="form-control" placeholder="MM/DD/AAAA" required name="datanasc" id="dataNascimento">
+                                                <label for="dataNascimento" id="labelData">Data de Nascimento</label>
                                             </div>
                                         </div>
                                     </div>
@@ -261,15 +285,17 @@
                                     <div class="row mb-2 g-2">
                                         <div class="col-md">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="floatingInputGrid" placeholder="Digite o e-mail do aluno" required>
-                                            <label for="floatingInputGrid">Digite o E-mail</label>
+                                            <!--Email-->
+                                            <input type="email" class="form-control" placeholder="Digite o e-mail do aluno" required name="email" id="email">
+                                            <label for="email" id="labelEmail">Digite o E-mail</label>
                                         </div>
                                         </div>
                                         <div class="col-md">
                                             <div class="form-floating">
-                                                <input type="tel" class="form-control" id="floatingInputGrid" placeholder="Digite o celular/telefone"
-                                                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" min="0" minlength="10" maxlength="11" required>
-                                                <label for="floatingInputGrid">Telefone / Celular com DDD</label>
+                                                <!--Telefone-->
+                                                <input type="tel" class="form-control" placeholder="(xx) XXXXX-XXXX"
+                                                  minlength="14" maxlength="16" required name="telefone" id="telefone">
+                                                <label for="telefone" id="labelTel">Telefone ou Celular com DDD</label>
                                             </div>
                                         </div>
                                     </div>                           
@@ -282,15 +308,17 @@
                                 <div class="row mb-2 g-2">
                                     <div class="col-md-10">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Logradouro" required>
-                                        <label for="floatingInputGrid">Logradouro</label>
+                                        <!--logradouro-->
+                                        <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" required name="logradouro">
+                                        <label for="logradouro">Logradouro</label>
                                     </div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="floatingInputGrid" placeholder="Número"
+                                            <!--Número-->
+                                            <input type="number" class="form-control" id="numero" placeholder="Número" name="numero"
                                             min="0" minlength="1" maxlength="5" required>
-                                            <label for="floatingInputGrid">Número</label>
+                                            <label for="numero">Número</label>
                                         </div>
                                     </div>
                                 </div>
@@ -299,16 +327,18 @@
                                  <div class="row mb-2 g-2">
                                      <div class="col-md-9">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Complemento">
-                                            <label for="floatingInputGrid">Complemento</label>
+                                            <!--Complemento-->
+                                            <input type="text" class="form-control" id="complemento" placeholder="Complemento" name="complemento">
+                                            <label for="complemento">Complemento</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-3">
                                         <div class="form-floating">
-                                            <input type="number" class="form-control" id="floatingInputGrid" placeholder="Número"
-                                            min="0" minlength="8" maxlength="10" required>
-                                            <label for="floatingInputGrid">Digite o CEP</label>
+                                            <!--CEP-->
+                                            <input type="text" class="form-control" placeholder="Número"
+                                            min="0" minlength="8" maxlength="10" required name="cep" id="cep">
+                                            <label for="cep">Digite o CEP</label>
                                         </div>
                                     </div>
 
@@ -316,53 +346,58 @@
 
                                 <!--Bairro, Cidade e Estado-->
                                 <div class="row mb-2 g-2">
-
                                     <div class="col-md-5">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Digite o Bairro" required>
-                                            <label for="floatingInputGrid">Digite o Bairro</label>
+                                            <!--Bairro-->
+                                            <input type="text" class="form-control"  placeholder="Digite o Bairro" 
+                                            name="bairro" id="bairro" required>
+                                            <label for="bairro">Digite o Bairro</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-5">
                                       <div class="form-floating">
-                                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Digite a Cidade" required>
-                                        <label for="floatingInputGrid">Digite a Cidade</label>
+                                        <!--Cidade-->
+                                        <input type="text" class="form-control" placeholder="Digite a Cidade" 
+                                        required name="cidade" id="cidade">
+                                        <label for="cidade">Digite a Cidade</label>
                                       </div>
                                     </div>
                                     <div class="col-md-2">
                                       <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select state" required>
+                                        <!-- Estado -->
+                                        <select class="form-select" aria-label="Floating label select state" 
+                                        name="estado" id="estado" required>
                                           <option selected>Selecione</option>
-                                          <option value="1">AC</option>
-                                          <option value="2">AL</option>
-                                          <option value="3">AP</option>
-                                          <option value="4">AM</option>
-                                          <option value="5">BA</option>
-                                          <option value="6">CE</option>
-                                          <option value="7">DF</option>
-                                          <option value="8">ES</option>
-                                          <option value="9">GO</option>
-                                          <option value="10">MA</option>
-                                          <option value="11">MT</option>
-                                          <option value="12">MS</option>
-                                          <option value="13">MG</option>
-                                          <option value="14">PA</option>
-                                          <option value="15">PB</option>
-                                          <option value="16">PR</option>
-                                          <option value="17">PE</option>
-                                          <option value="18">PI</option>
-                                          <option value="19">RJ</option>
-                                          <option value="20">RN</option>
-                                          <option value="21">RS</option>
-                                          <option value="22">RO</option>
-                                          <option value="23">RR</option>
-                                          <option value="24">SC</option>
-                                          <option value="25">SP</option>
-                                          <option value="26">SE</option>
-                                          <option value="27">TO</option>
+                                          <option value="AC">AC</option>
+                                          <option value="AL">AL</option>
+                                          <option value="AP">AP</option>
+                                          <option value="AM">AM</option>
+                                          <option value="BA">BA</option>
+                                          <option value="CE">CE</option>
+                                          <option value="DF">DF</option>
+                                          <option value="ES">ES</option>
+                                          <option value="GO">GO</option>
+                                          <option value="MA">MA</option>
+                                          <option value="MT">MT</option>
+                                          <option value="MS">MS</option>
+                                          <option value="MG">MG</option>
+                                          <option value="PA">PA</option>
+                                          <option value="PB">PB</option>
+                                          <option value="PR">PR</option>
+                                          <option value="PE">PE</option>
+                                          <option value="PI">PI</option>
+                                          <option value="RJ">RJ</option>
+                                          <option value="RN">RN</option>
+                                          <option value="RS">RS</option>
+                                          <option value="RO">RO</option>
+                                          <option value="RR">RR</option>
+                                          <option value="SC">SC</option>
+                                          <option value="SP">SP</option>
+                                          <option value="SE">SE</option>
+                                          <option value="TO">TO</option>
                                         </select>
-                                        <label for="floatingSelectGrid">Estado</label>
+                                        <label for="estado">Estado</label>
                                       </div>
                                     </div>
                                   </div>
@@ -375,34 +410,48 @@
                                 <div class="row mb-2 g-2">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select classroom" required>
+                                        <!-- Turma -->
+                                        <select class="form-select" aria-label="Floating label select classroom"
+                                         required name="turma" id="turma">
                                             <option selected>Selecione a turma</option>
-                                            <option value="1">Turma 01</option>
-                                            <option value="2">Turma 02</option>
-                                            <option value="3">Turma 03</option>
-                                            <option value="4">Reserva</option>
+                                            <option value="Turma 01">Turma 01</option>
+                                            <option value="Turma 02">Turma 02</option>
+                                            <option value="Turma 03">Turma 03</option>
+                                            <option value="Turma 04">Reserva</option>
                                         </select>
-                                        <label for="floatingSelectGrid">Turma</label>
+                                        <label for="turma">Turma</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select function" required>
+                                         <!--Função-->   
+                                        <select class="form-select" aria-label="Floating label select function"
+                                        required  name="funcao" id="funcao" >
                                             <option selected>Selecione a função</option>
-                                            <option value="1">FrontEnd</option>
-                                            <option value="2">BackEnd</option>
-                                            <option value="3">DevOps</option>
+                                            <option value="FrontEnd">FrontEnd</option>
+                                            <option value="BackEnd">BackEnd</option>
+                                            <option value="DevOps">DevOps</option>
                                         </select>
-                                        <label for="floatingSelectGrid">Função</label>
+                                        <label for="funcao">Função</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                         <!--matricula-->   
+                                             <input type="text" class="form-control text-center text-primary"  placeholder="Matricula gerada" 
+                                             name="matricula" id="matricula" readonly>
+                                             <label for="matricula">Matrícula do Aluno</label>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!--Comentários-->
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Escreva um comentário" id="floatingTextarea"></textarea>
-                                    <label for="floatingTextarea">Comentário</label>
+                                    <textarea class="form-control" placeholder="Escreva um comentário" id="comentarios" name="comentarios"></textarea>
+                                    <label for="comentarios">Comentário</label>
                                   </div>
                             </fieldset>
 
@@ -411,9 +460,12 @@
                         
                         <div class="modal-footer btn-group">
                             <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-lg btn-primary"> <i class="fa-solid fa-circle-plus"></i> Adicionar Aluno</button>
+                            <button type="reset" class="btn btn-lg btn-dark" ><i class="fa-solid fa-eraser"></i> Limpar</button>
+                            <button type="submit" class="btn btn-lg btn-primary" id="botaoAddAluno"> <i class="fa-solid fa-circle-plus"></i> Adicionar</button>
                         </div>
-                    </div>
+                    </form>
+
+            <!--fim do FORM  -->
 
                 </article>
 
@@ -473,16 +525,16 @@
             </article>
 
         </section>
+
         
     <!-- Script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  
+   
+    <script src="./script/script.js" type="module"> </script>
+
     
-<!--Pequeno Evento para ativar a funcionalidade da listagem de alunos-->
-    <script>
-        const CLASSROOM = document.getElementById("card__classroom");
-        CLASSROOM.addEventListener('click', ()=>{
-          window.location.replace("./classroom.html");
-        })
-    </script>
+
+
 </body>
 </html>
