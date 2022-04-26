@@ -182,6 +182,8 @@ const editarAluno = async (id )=> {
         
     const data = await response.json();
 
+    console.log(data)
+
     const id = data._id;
     const nome = data.nome;
     const email = data.email;
@@ -276,7 +278,7 @@ const editarAluno = async (id )=> {
                                                             <div class="col-md">
                                                                 <div class="form-floating">
                                                                     <!--Telefone-->
-                                                                    <input type="tel" class="form-control" value=${telefone}
+                                                                    <input type="tel" class="form-control" value="${telefone}"
                                                                     minlength="14" maxlength="16" name="telefone" id="telefone">
                                                                     <label for="telefone" id="labelTel">Telefone ou Celular com DDD</label>
                                                                 </div>
