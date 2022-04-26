@@ -201,22 +201,22 @@ const editarAluno = async (id )=> {
                                                         <!--Nome-->
                                                         <div class="row mb-2 g-2">
                                                             <div class="col-md">
-                                                            <div class="form-floating">
-                                                                <!--NOME-->
-                                                                <input type="text" class="form-control" value=${nome} id="nome" name="nome">
-                                                                <label for="nome">Nome Completo</label>
-                                                            </div>
+                                                                <div class="form-floating">
+                                                                    <!--NOME-->
+                                                                    <input type="text" class="form-control" value="${nome}"  id="nome" name="nome">
+                                                                    <label for="nome">Nome Completo</label>
+                                                                </div>
                                                             </div>
                                                         </div>
 
                                                     <!--url da imagem-->
                                                         <div class="row mb-2 g-2">
                                                             <div class="col-md">
-                                                            <div class="form-floating">
-                                                                <!--IMAGEM-->
-                                                                <input type="text" class="form-control" value=${imagem} id="imagem" name="imagem">
-                                                                <label for="nome">URL da Imagem</label>
-                                                            </div>
+                                                                <div class="form-floating">
+                                                                    <!--IMAGEM-->
+                                                                    <input type="text" class="form-control" value=${imagem} id="imagem" name="imagem">
+                                                                    <label for="nome">URL da Imagem</label>
+                                                                </div>
                                                             </div>
                                                         </div>
 
@@ -278,7 +278,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-10">
                                                         <div class="form-floating">
                                                             <!--logradouro-->
-                                                            <input type="text" class="form-control" id="logradouro" value=${logradouro} name="logradouro">
+                                                            <input type="text" class="form-control" id="logradouro" value="${logradouro}" name="logradouro">
                                                             <label for="logradouro">Logradouro</label>
                                                         </div>
                                                         </div>
@@ -297,7 +297,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-9">
                                                             <div class="form-floating">
                                                                 <!--Complemento-->
-                                                                <input type="text" class="form-control" id="complemento" value=${complemento} name="complemento">
+                                                                <input type="text" class="form-control" id="complemento" value="${complemento}" name="complemento">
                                                                 <label for="complemento">Complemento</label>
                                                             </div>
                                                         </div>
@@ -318,7 +318,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-5">
                                                             <div class="form-floating">
                                                                 <!--Bairro-->
-                                                                <input type="text" class="form-control" value=${bairro} 
+                                                                <input type="text" class="form-control" value="${bairro}" 
                                                                 name="bairro" id="bairro">
                                                                 <label for="bairro">Digite o Bairro</label>
                                                             </div>
@@ -327,7 +327,7 @@ const editarAluno = async (id )=> {
                                                         <div class="col-md-5">
                                                         <div class="form-floating">
                                                             <!--Cidade-->
-                                                            <input type="text" class="form-control"value=${cidade}
+                                                            <input type="text" class="form-control"value="${cidade}"
                                                             name="cidade" id="cidade">
                                                             <label for="cidade">Digite a Cidade</label>
                                                         </div>
@@ -382,7 +382,7 @@ const editarAluno = async (id )=> {
                                                             <!-- Turma -->
                                                             <select class="form-select" aria-label="Floating label select classroom"
                                                              name="turma" id="turma" >
-                                                                <option value=${turma}>${turma}</option>
+                                                                <option value="${turma}">${turma}</option>
                                                                 <option value="Turma 01">Turma 01</option>
                                                                 <option value="Turma 02">Turma 02</option>
                                                                 <option value="Turma 03">Turma 03</option>
@@ -397,7 +397,7 @@ const editarAluno = async (id )=> {
                                                             <!--Função-->   
                                                             <select class="form-select" aria-label="Floating label select function"
                                                               name="funcao" id="funcao"  >
-                                                                <option value=${funcao}> ${funcao}</option>
+                                                                <option value="${funcao}"> ${funcao}</option>
                                                                 <option value="FrontEnd">FrontEnd</option>
                                                                 <option value="BackEnd">BackEnd</option>
                                                                 <option value="DevOps">DevOps</option>
@@ -420,7 +420,7 @@ const editarAluno = async (id )=> {
 
                                                     <!--Comentários-->
                                                     <div class="form-floating mb-4">
-                                                        <textarea class="form-control" value=${comentarios} id="comentarios" name="comentarios"></textarea>
+                                                        <textarea class="form-control" value="${comentarios}" id="comentarios" name="comentarios"></textarea>
                                                         <label for="comentarios">Comentário</label>
                                                     </div>
                                                 </fieldset>
