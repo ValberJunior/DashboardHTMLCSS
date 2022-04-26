@@ -143,7 +143,7 @@ async function filtrarAluno(valor){
 
                                         <h5>Endereço</h5>
                                         <label  class="text-secondary">Logradouro</label>
-                                        <p>${logradouro} - Número ${numero}, ${complemento?complemento:null} / cep ${cep}, ${bairro} - ${cidade} - ${estado} </p>
+                                        <p>${logradouro} - Número ${numero}, ${complemento} / cep ${cep}, ${bairro} - ${cidade} - ${estado} </p>
 
                                         <label  class="text-secondary">Turma</label>
                                         <p> ${turma !== "" ? turma : "Defenir Turma" }</p>
