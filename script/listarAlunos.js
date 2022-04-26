@@ -430,7 +430,6 @@ const editarAluno = async (id )=> {
                                             
                                             <div class= btn-group">
                                                 <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                <button type="reset" class="btn btn-lg btn-dark" ><i class="fa-solid fa-eraser"></i> Limpar</button>
                                                 <button type="submit" class="btn btn-lg btn-primary" id="botaoAddAluno"> <i class="fa-solid fa-floppy-disk"></i> Salvar</button>
                                             </div>
                                         </form>
