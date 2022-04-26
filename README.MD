@@ -6,21 +6,21 @@
 
 2- Listagem de alunos consumindo a API, "https://api-fiveacademy.herokuapp.com/api/alunos/":
 
-* Listagem de todos os alunos.
-- Lista individual de todas as informações do aluno selecionado.
-- Envio de um novo aluno para a API.
-- Edição de alunos existentes na API.
+✔️ Listagem de todos os alunos.
+✔️ Lista individual de todas as informações do aluno selecionado.
+✔️ Envio de um novo aluno para a API.
+✔️ Edição de alunos existentes na API.
 <br>
 <h4>OBS: Link do repositório da API criada por mim 👉 <a href="https://github.com/ValberJunior/api" type="button">Aqui</a></h4>
 <br>
 
-- O formulário não será enviado se o campos Nome, CPF, Data Nascimento, Telefone estiverem vazios.
-- Validação do campo de email.
-- Validação do campo de cpf.
-- Validação do campo da data de nascimento.
-- Validação do campo de telefone, adicionando a mascara (00) 0000-0000.
+✔️ O formulário não será enviado se o campos Nome, CPF, Data Nascimento, Telefone estiverem vazios.
+✔️ Validação do campo de email.
+✔️ Validação do campo de cpf.
+✔️ Validação do campo da data de nascimento.
+✔️ Validação do campo de telefone, adicionando a mascara (00) 0000-0000.
 
-- Validação do CEP com a API https://viacep.com.br/ws/CEP_DIGITADO_AQUI/json/
+✔️ Validação do CEP com a API https://viacep.com.br/ws/CEP_DIGITADO_AQUI/json/
 e retornando com o preenchimento automático dos campos endereço, bairro, cidade, estado .<br><br>
 
 
