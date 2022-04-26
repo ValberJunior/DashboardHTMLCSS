@@ -27,34 +27,6 @@ https://user-images.githubusercontent.com/84424883/165349866-f36dc996-eff0-48bd-
 
 
 
-<h2>Objetivo anterior</h2>
-
-  Nesse exercício de HTML e CSS, você vai precisar usar os conhecimentos aprendidos para auxiliar a Five Academy a desenvolver um sistema para gerenciar as turmas da academia.
-Sua missão será construir o formulário para cadastro de alunos e a listagem dos alunos cadastrados.
-Você pode utilizar os recursos que achar necessários mas é necessário que o sistema  contenha:
-
-- Header fixo 
-- Menu lateral
-- Listagem dos alunos
-- Form para adicionar e editar alunos
-- Nome
-- Data de nascimento
-- CPF
-- CEP
-- Endereço
-- Número
-- Complemento
-- Bairro
-- Cidade
-- Estado
-- Telefone
-- Celular
-- Email
-- Observações
-
-  Os dados podem ser todos fixos e fictícios. Nenhum desses elementos descritos acima precisam possuir funcionalidade, a ideia aqui é apenas testar os conhecimentos de HTML e CSS. 
-O formulário para edição dos alunos e a listagem também não necessitam estar na mesma página, podem ser feitos em páginas diferentes.
-
 <br>
 <h3>Tecnologias utilizadas:</h3>
 <div style="display=inline-block">
