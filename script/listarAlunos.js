@@ -184,7 +184,7 @@ const editarAluno = async (id )=> {
     const turma = data.turma;
     const funcao = data.funcao;
     const imagem = data.imagem;
-    const obs = data.comentarios;
+    const comentarios = data.comentarios;
     const matricula = data.matricula;
     
     
