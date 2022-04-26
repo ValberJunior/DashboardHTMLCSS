@@ -202,6 +202,8 @@ const editarAluno = async (id )=> {
     const imagem = data.imagem;
     const comentarios = data.comentarios;
     const matricula = data.matricula;
+     
+     console.log(complemento)
     
     
         informacoes.innerHTML = `
