@@ -223,7 +223,7 @@ header #mobile__offcanvas{
     display: none;
 }
 
-#loading, #loadingInfo{
+#loadingInfo{
     display: flex;
     justify-content: center;
     align-items: center;
