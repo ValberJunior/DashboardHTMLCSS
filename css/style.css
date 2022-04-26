@@ -1,3 +1,14 @@
+
+*{
+    box-sizing: border-box; 
+    scrollbar-width: none; /*firefox*/
+   }
+   
+   *::-webkit-scrollbar { 
+       display: none; 
+   }
+   
+
 /* Colors */
 .special__bg{
     background: linear-gradient(#e7e5e5, #e7e5e5, #e7e5e5, #e7e5e585);
@@ -7,6 +18,12 @@
 /* Body */
 body{
     background-color: #e7e5e5;
+
+    overflow-x: hidden;
+ 
+    scroll-behavior: smooth;
+
+    scroll-snap-type: y mandatory;
 }
 
 /* Header */
