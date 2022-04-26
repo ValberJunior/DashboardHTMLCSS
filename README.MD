@@ -1,29 +1,24 @@
-<h1>Upgrade do Dashboard</h1>
+<h1> Dashboard Academy Five</h1>
 
-<h2>Novo Objetivo</h2>
+<h2>Nova release</h2>
 
-Nesse exercício de Javascript você vai precisar usar os conhecimentos aprendidos para continuar a auxiliar a Five Academy a desenvolver um sistema para gerenciar as turmas da academia.
+1- Ajuse nas validações do formulário para cadastro de alunos.
 
-Sua missão agora será:
+2- Listagem de alunos consumindo a API, "https://api-fiveacademy.herokuapp.com/api/alunos/":
 
-1- Ajustar as validações do formulário para cadastro de alunos.
+* Listagem de todos os alunos.
+- Lista individual de todas as informações do aluno selecionado.
+- Envio de um novo aluno para a API.
+- Edição de alunos existentes na API.
 
-2- Também será necessário buscar a listagem de alunos de um servidor, bem como enviar ao servidor os novos alunos cadastrados e os alterados.
-Você vai implementar os seguintes requisitos:
+- O formulário não será enviado se o campos Nome, CPF, Data Nascimento, Telefone estiverem vazios.
+- Validação do campo de email.
+- Validação do campo de cpf.
+- Validação do campo da data de nascimento.
+- Validação do campo de telefone, adicionando a mascara (00) 0000-0000.
 
-* Buscar a listagem de alunos de https://five-turma-3.herokuapp.com/alunos (GET)
-- Ao clicar sobre um aluno deve carregar o formulário com os dados deste aluno https://five-turma-3.herokuapp.com/alunos/:id_aluno (GET)
-- Enviar um novo aluno para >> https://five-turma-3.herokuapp.com/alunos (POST)
-- Enviar os dados de um aluno alterado para  https://five-turma-3.herokuapp.com/alunos (PATCH)
-
-- O formulário não poderá ser enviado se o campos Nome, CPF, Data Nascimento, Telefone não contiverem valor
-- O campo de email deve validar se o conteúdo é um email válido
-- O campo de CPF deve validar se é um CPF válido
-- O campo de Data de Nascimento deve possuir máscara de data e validar se é uma data válida 
-- O campo de telefone deve possuir uma máscara no formato (00) 0000-0000
-
-- O campo de CEP deve buscar o CEP digitado em https://viacep.com.br/ws/CEP_DIGITADO_AQUI/json/
-Com o retorno do CEP deve preencher os campos endereço, bairro, cidade, estado  ✅
+- Validação do CEP com a API https://viacep.com.br/ws/CEP_DIGITADO_AQUI/json/
+e retornando com o preenchimento automático dos campos endereço, bairro, cidade, estado .
 
 
 
