@@ -223,8 +223,14 @@ header #mobile__offcanvas{
     display: none;
 }
 
-#loadingInfo img {
+#loading, #loadingInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading img, #loadingInfo img {
         
-    width: 500px;
+    width: 80%;
 
 }

@@ -88,14 +88,6 @@
         align-items: center;
     }
 
-    /* loadingInfo */
-
-
-        #loadingInfo img {
-                
-            width: 300px;
-            margin-left: 0;
-        }
 
 
 
@@ -186,17 +178,6 @@
         background-color: #e7e5e5;
     }
 
-
-        /* loadingInfo */
-
-
-        #loadingInfo img {
-                width: 550px;
-                display: inline-block;
-                text-align: center;
-                margin-left: 0;
-
-        }
 
 
 
