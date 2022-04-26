@@ -21,6 +21,10 @@
 e retornando com o preenchimento automático dos campos endereço, bairro, cidade, estado .
 
 
+https://user-images.githubusercontent.com/84424883/165349866-f36dc996-eff0-48bd-b5bd-9d6e063daea4.mp4
+
+
+
 
 <h2>Objetivo anterior</h2>
 
