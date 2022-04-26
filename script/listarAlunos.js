@@ -26,6 +26,9 @@ else{
 function montarTabela(data){
     
     const alunos = data;
+     
+    alunos.sort(compare); // ordenar por nome
+
 
     LOADING.classList.add("invisivel");
 
@@ -63,6 +66,17 @@ function montarTabela(data){
 
 
         }
+
+function compare(a,b) {      //função de comparação
+    if (a.nome < b.nome){
+        return -1;
+    }
+    if (a.nome > b.nome){
+         return 1;
+    }
+
+    return 0;
+          }
  
 
 
