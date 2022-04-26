@@ -85,7 +85,7 @@ if(TELEFONE){
               
 }
 
-//Adicionar Aluno
+//Adicionar Aluno                     //apagar esse trecho depois
 
 if(ADDALUNO){
   ADDALUNO.addEventListener('click',()=>{
@@ -169,5 +169,7 @@ GERENCIARTURMA.addEventListener('click', ()=>{
 }
 
 listarAlunos();
+
+
 
 
