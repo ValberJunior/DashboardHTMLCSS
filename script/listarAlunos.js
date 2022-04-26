@@ -168,26 +168,24 @@ const editarAluno = async (id )=> {
         
     const data = await response.json();
 
-    if(data){
-        const id = data._id;
-        const nome = data.nome;
-        const email = data.email;
-        const cpf = data.cpf;
-        const telefone = data.telefone;
-        const datanasc = data.datanasc;
-        const numero = data.numero;
-        const bairro = data.bairro;
-        const cep = data.cep;
-        const cidade = data.cidade;
-        const logradouro = data.logradouro;
-        const complemento = data.complemento;
-        const estado = data.estado;
-        const turma = data.turma;
-        const funcao = data.funcao;
-        const imagem = data.imagem;
-        const obs = data.comentarios;
-        const matricula = data.matricula;
-    }
+    const id = data._id;
+    const nome = data.nome;
+    const email = data.email;
+    const cpf = data.cpf;
+    const telefone = data.telefone;
+    const datanasc = data.datanasc;
+    const numero = data.numero;
+    const bairro = data.bairro;
+    const cep = data.cep;
+    const cidade = data.cidade;
+    const logradouro = data.logradouro;
+    const complemento = data.complemento;
+    const estado = data.estado;
+    const turma = data.turma;
+    const funcao = data.funcao;
+    const imagem = data.imagem;
+    const obs = data.comentarios;
+    const matricula = data.matricula;
     
     
         informacoes.innerHTML = `
