@@ -1,6 +1,6 @@
 <h1> Dashboard Academy Five</h1>
 
-<h2>Nova release</h2>
+<h2>Nova release</h2><br>
 
 1- Ajuse nas validações do formulário para cadastro de alunos.
 
@@ -10,8 +10,10 @@
 - Lista individual de todas as informações do aluno selecionado.
 - Envio de um novo aluno para a API.
 - Edição de alunos existentes na API.
-
-OBS: Link do repositório da API criada por mim 👉 <a href="https://github.com/ValberJunior/api" type="button">Aqui</a>
+- 
+<br>
+<h4>OBS: Link do repositório da API criada por mim 👉 <a href="https://github.com/ValberJunior/api" type="button">Aqui</a></h4>
+<br>
 
 - O formulário não será enviado se o campos Nome, CPF, Data Nascimento, Telefone estiverem vazios.
 - Validação do campo de email.
@@ -20,7 +22,7 @@ OBS: Link do repositório da API criada por mim 👉 <a href="https://github.com
 - Validação do campo de telefone, adicionando a mascara (00) 0000-0000.
 
 - Validação do CEP com a API https://viacep.com.br/ws/CEP_DIGITADO_AQUI/json/
-e retornando com o preenchimento automático dos campos endereço, bairro, cidade, estado .
+e retornando com o preenchimento automático dos campos endereço, bairro, cidade, estado .<br><br>
 
 
 https://user-images.githubusercontent.com/84424883/165349866-f36dc996-eff0-48bd-b5bd-9d6e063daea4.mp4
