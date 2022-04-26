@@ -10,7 +10,6 @@
 - Lista individual de todas as informações do aluno selecionado.
 - Envio de um novo aluno para a API.
 - Edição de alunos existentes na API.
-- 
 <br>
 <h4>OBS: Link do repositório da API criada por mim 👉 <a href="https://github.com/ValberJunior/api" type="button">Aqui</a></h4>
 <br>
