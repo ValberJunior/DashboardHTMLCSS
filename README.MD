@@ -11,7 +11,7 @@
 - Envio de um novo aluno para a API.
 - Edição de alunos existentes na API.
 
-OBS: Link do repositório da API criada por mim 👉 < a href="https://github.com/ValberJunior/api" type="button">Aqui</a>
+OBS: Link do repositório da API criada por mim 👉 < a href="https://github.com/ValberJunior/api">Aqui</a>
 
 - O formulário não será enviado se o campos Nome, CPF, Data Nascimento, Telefone estiverem vazios.
 - Validação do campo de email.
