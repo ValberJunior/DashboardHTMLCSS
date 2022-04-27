@@ -84,7 +84,8 @@ function compare(a,b) {      //função de comparação
 
 async function filtrarAluno(valor){
 
-    const URL = `https://api-fiveacademy.herokuapp.com/api/alunos/${valor}`
+    const ID = valor;
+    const URL = `https://api-fiveacademy.herokuapp.com/api/alunos/${ID}`
     const response = await fetch(URL);
 
 
@@ -114,12 +115,13 @@ async function filtrarAluno(valor){
             const imagem = aluno.imagem;
             const obs = aluno.comentarios;
             const matricula = aluno.matricula;
+
     
 
             LOADINGINFO.classList.add("invisivel");
 
                      headerInfo.innerHTML = `
-                                                <h2 class="infoAluno-nome ms-2" >${nome}</h2> 
+                                                <h2 class="infoAluno-nome display-5 ms-2 text-primary" >${nome}</h2> 
                                                  <img src=${imagem} class="infoAluno-imagem" alt="foto do aluno" /> 
                             
                              `
@@ -141,8 +143,7 @@ async function filtrarAluno(valor){
                                         <label  class="text-secondary">Data de Nascimento</label>
                                         <p>${datanasc}</p>
 
-                                        <h5>Endereço</h5>
-                                        <label  class="text-secondary">Logradouro</label>
+                                        <label  class="text-secondary">Endereçp</label>
                                         <p>${logradouro} - Número ${numero}, ${complemento} / cep ${cep}, ${bairro} - ${cidade} - ${estado} </p>
 
                                         <label  class="text-secondary">Turma</label>
@@ -154,7 +155,7 @@ async function filtrarAluno(valor){
                                         <label class="text-secondary">Comentários</label>
                                         <p>${obs !== "" ? obs : "Nenhuma observação"}</p>  
 
-                                        <button type="button" class="btn btn-primary" idAluno=${id} id="editarAluno">Editar Aluno <i class="fa-solid fa-pen"></i></button>
+                                        <button type="button" class="btn btn-lg btn-primary" idAluno=${id} id="editarAluno">Editar Aluno <i class="fa-solid fa-pen"></i></button>
                 
                                      `       
                         }
@@ -182,6 +183,7 @@ const editarAluno = async (id )=> {
         
     const data = await response.json();
 
+    console.log(data);
 
     const id = data._id;
     const nome = data.nome;
@@ -202,7 +204,7 @@ const editarAluno = async (id )=> {
     const comentarios = data.comentarios;
     const matricula = data.matricula;
      
-    
+
     
         informacoes.innerHTML = `
         
@@ -436,7 +438,7 @@ const editarAluno = async (id )=> {
 
                                                     <!--Comentários-->
                                                     <div class="form-floating mb-4">
-                                                        <textarea class="form-control" value="${comentarios}" id="comentarios" name="comentarios"></textarea>
+                                                        <textarea class="form-control" id="comentarios" name="comentarios">${comentarios}</textarea>
                                                         <label for="comentarios">Comentário</label>
                                                     </div>
                                                 </fieldset>
