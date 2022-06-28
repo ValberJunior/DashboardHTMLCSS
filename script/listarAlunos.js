@@ -1,39 +1,39 @@
-import { headerInfo, informacoes, LOADING, LOADINGINFO, tdbody} from "./elements.js";
+import {
+  headerInfo,
+  informacoes,
+  LOADING,
+  LOADINGINFO,
+  tdbody,
+} from "./elements.js";
 
 //Montar Tabela de Alunos
 
 const URL = "https://api-fiveacademy.herokuapp.com/api/alunos/";
 
-export const listarAlunos = async()=>{
- const response = await fetch(URL);
+export const listarAlunos = async () => {
+  const response = await fetch(URL);
 
- LOADING.classList.remove("invisivel");
+  LOADING.classList.remove("invisivel");
 
- if (!response.ok) {
+  if (!response.ok) {
     LOADING.classList.add("invisivel");
-    throw new Error(`Houve um erro, status: ${response.status}`); 
-}
-else{
-        const data = await response.json();
+    throw new Error(`Houve um erro, status: ${response.status}`);
+  } else {
+    const data = await response.json();
 
-        montarTabela(data);
+    montarTabela(data);
+  }
+};
 
-        }
-}
- 
+function montarTabela(data) {
+  const alunos = data;
 
+  alunos.sort(compare); // ordenar por nome
 
-function montarTabela(data){
-    
-    const alunos = data;
-     
-    alunos.sort(compare); // ordenar por nome
+  LOADING.classList.add("invisivel");
 
-
-    LOADING.classList.add("invisivel");
-
-        alunos.map((item)=>{
-            tdbody.innerHTML += `
+  alunos.map((item) => {
+    tdbody.innerHTML += `
                                 <tr>
                                       <th scope="row">${item.matricula}</th>
                                       <td>${item.nome}</td>
@@ -43,91 +43,78 @@ function montarTabela(data){
                                       id="visualizar" filter="${item._id}"><i class="fa-solid fa-eye"></i></button></td>
                                       
                                 </tr>
-                                `
-                            });
+                                `;
+  });
 
-            tdbody.innerHTML += ` <td colspan="5" class="text-end"><button class="btn btn-primary">Editar turma</button></td>`;
+  tdbody.innerHTML += ` <td colspan="5" class="text-end"><button class="btn btn-primary">Editar turma</button></td>`;
 
-            
-            if(document.getElementById("visualizar")){
+  if (document.getElementById("visualizar")) {
+    const BOTOES = document.querySelectorAll("#visualizar");
 
-                const BOTOES = document.querySelectorAll("#visualizar");
+    BOTOES.forEach((botao) => {
+      botao.addEventListener("click", (event) => {
+        const aluno = event.target.parentNode;
+        const ID = aluno.getAttribute("filter");
 
-                BOTOES.forEach(botao=>{
-                    botao.addEventListener('click',(event)=>{
-                        const aluno = event.target.parentNode;
-                        const ID = aluno.getAttribute("filter");
+        filtrarAluno(ID);
+      });
+    });
+  }
+}
 
-                        filtrarAluno(ID);
-                    })
-                });
-                
-            }
+function compare(a, b) {
+  //função de comparação
+  if (a.nome < b.nome) {
+    return -1;
+  }
+  if (a.nome > b.nome) {
+    return 1;
+  }
 
-
-        }
-
-function compare(a,b) {      //função de comparação
-    if (a.nome < b.nome){
-        return -1;
-    }
-    if (a.nome > b.nome){
-         return 1;
-    }
-
-    return 0;
-          }
- 
-
+  return 0;
+}
 
 //Filtrar Aluno
 
-async function filtrarAluno(valor){
+async function filtrarAluno(valor) {
+  const ID = valor;
+  const URL = `https://api-fiveacademy.herokuapp.com/api/alunos/${ID}`;
+  const response = await fetch(URL);
 
-    const ID = valor;
-    const URL = `https://api-fiveacademy.herokuapp.com/api/alunos/${ID}`
-    const response = await fetch(URL);
+  if (!response.ok) {
+    LOADINGINFO.classList.add("invisivel");
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    const aluno = await response.json();
 
+    const id = aluno._id;
+    const nome = aluno.nome;
+    const email = aluno.email;
+    const cpf = aluno.cpf;
+    const telefone = aluno.telefone;
+    const datanasc = aluno.datanasc;
+    const numero = aluno.numero;
+    const bairro = aluno.bairro;
+    const cep = aluno.cep;
+    const cidade = aluno.cidade;
+    const logradouro = aluno.logradouro;
+    const complemento = aluno.complemento;
+    const estado = aluno.estado;
+    const turma = aluno.turma;
+    const funcao = aluno.funcao;
+    const imagem = aluno.imagem;
+    const obs = aluno.comentarios;
+    const matricula = aluno.matricula;
 
-    if (!response.ok) {
-        LOADINGINFO.classList.add("invisivel");
-        throw new Error(`HTTP error! status: ${response.status}`);
+    LOADINGINFO.classList.add("invisivel");
 
-    }
-    else{
-            const aluno = await response.json();
-
-            const id = aluno._id;
-            const nome = aluno.nome;
-            const email = aluno.email;
-            const cpf = aluno.cpf;
-            const telefone = aluno.telefone;
-            const datanasc = aluno.datanasc;
-            const numero = aluno.numero;
-            const bairro = aluno.bairro;
-            const cep = aluno.cep;
-            const cidade = aluno.cidade;
-            const logradouro = aluno.logradouro;
-            const complemento = aluno.complemento;
-            const estado = aluno.estado;
-            const turma = aluno.turma;
-            const funcao = aluno.funcao;
-            const imagem = aluno.imagem;
-            const obs = aluno.comentarios;
-            const matricula = aluno.matricula;
-
-    
-
-            LOADINGINFO.classList.add("invisivel");
-
-                     headerInfo.innerHTML = `
+    headerInfo.innerHTML = `
                                                 <h2 class="infoAluno-nome display-5 ms-2 text-primary" >${nome}</h2> 
                                                  <img src=${imagem} class="infoAluno-imagem" alt="foto do aluno" /> 
                             
-                             `
-            
+                             `;
 
-                    informacoes.innerHTML = `
+    informacoes.innerHTML = `
                                         <label class="text-secondary">Matricula</label>
                                         <p>${matricula}</p>
 
@@ -143,44 +130,53 @@ async function filtrarAluno(valor){
                                         <label  class="text-secondary">Data de Nascimento</label>
                                         <p>${datanasc}</p>
 
-                                        <label  class="text-secondary">Endereçp</label>
+                                        <label  class="text-secondary">Endereço</label>
                                         <p>${logradouro} - Número ${numero}, ${complemento} / cep ${cep}, ${bairro} - ${cidade} - ${estado} </p>
 
                                         <label  class="text-secondary">Turma</label>
-                                        <p> ${turma !== "" ? turma : "Defenir Turma" }</p>
+                                        <p> ${
+                                          turma !== "" ? turma : "Defenir Turma"
+                                        }</p>
 
                                         <label  class="text-secondary">Função</label>
-                                        <p> ${funcao !== "" ? funcao : "Defenir Função" }</p>
+                                        <p> ${
+                                          funcao !== ""
+                                            ? funcao
+                                            : "Defenir Função"
+                                        }</p>
 
                                         <label class="text-secondary">Comentários</label>
-                                        <p>${obs !== "" ? obs : "Nenhuma observação"}</p>  
+                                        <p>${
+                                          obs !== ""
+                                            ? obs
+                                            : "Nenhuma observação"
+                                        }</p>  
 
                                         <button type="button" class="btn btn-lg btn-primary" idAluno=${id} id="editarAluno">Editar Aluno <i class="fa-solid fa-pen"></i></button>
                 
-                                     `       
-                        }
+                                     `;
+  }
 
-                        if(document.getElementById('editarAluno')){
-                            const EDITARALUNO = document.getElementById('editarAluno');
-                            EDITARALUNO.addEventListener('click', ()=>{
-                                const id = EDITARALUNO.getAttribute("idAluno");
-                                editarAluno(id);
-                            })
-                        } 
-    
-
+  if (document.getElementById("editarAluno")) {
+    const EDITARALUNO = document.getElementById("editarAluno");
+    EDITARALUNO.addEventListener("click", () => {
+      const id = EDITARALUNO.getAttribute("idAluno");
+      editarAluno(id);
+    });
+  }
 }
 
 //editar Aluno
-const editarAluno = async (id )=> {
-    const ID = id;
+const editarAluno = async (id) => {
+  const ID = id;
 
-    const response = await fetch(`https://api-fiveacademy.herokuapp.com/api/alunos/${ID}`);
+  const response = await fetch(
+    `https://api-fiveacademy.herokuapp.com/api/alunos/${ID}`
+  );
 
-    if(!response.ok){
-        console.log("Houve um erro")
-    }else{
-        
+  if (!response.ok) {
+    console.log("Houve um erro");
+  } else {
     const data = await response.json();
 
     console.log(data);
@@ -203,10 +199,8 @@ const editarAluno = async (id )=> {
     const imagem = data.imagem;
     const comentarios = data.comentarios;
     const matricula = data.matricula;
-     
 
-    
-        informacoes.innerHTML = `
+    informacoes.innerHTML = `
         
                                         <!--Inicio do FORM  -->
                                         <form class= p-3 pt-5 mt-5" action="https://api-fiveacademy.herokuapp.com/api/alunos" method="POST" id="formulario">
@@ -452,9 +446,6 @@ const editarAluno = async (id )=> {
                                             </div>
                                         </form>
 
-        `
-
-        
-
-      }
-}
+        `;
+  }
+};

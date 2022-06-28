@@ -24,8 +24,6 @@ export const COMENTARIOS = document.querySelector("#comentarios");
 export const MATRICULA = document.querySelector("#matricula");
 export const ADDALUNO = document.querySelector("#botãoAddAluno");
 
-
-
 //página Turmas
 
 export let headerInfo = document.querySelector("#headerInfo");
